@@ -1,29 +1,29 @@
 The Flavi Fighters
-#BioE231 Final Project by Smrithi Surender, Marriëtte Peutz, & Kate Barouch
+# BioE231 Final Project by Smrithi Surender, Marriëtte Peutz, & Kate Barouch
 
-##This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
+## This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
 
-##We chose to focus on the Flavivirus family due to the increasing global health threats posed by viruses like Dengue and Zika. 
+## We chose to focus on the Flavivirus family due to the increasing global health threats posed by viruses like Dengue and Zika. 
 
-###Dengue cases are rising worldwide, with climate warming expanding mosquito habitats and contributing to outbreaks in new regions. 
+### Dengue cases are rising worldwide, with climate warming expanding mosquito habitats and contributing to outbreaks in new regions. 
 
-###Zika virus is also a significant concern, as it remains on the World Health Organization's priority list for epidemic potential due to its association with severe birth defects, such as microcephaly, when infections occur during pregnancy. 
+### Zika virus is also a significant concern, as it remains on the World Health Organization's priority list for epidemic potential due to its association with severe birth defects, such as microcephaly, when infections occur during pregnancy. 
 
 Need to finish writing this section as we go!
-#Table of Contents
-#x
-#x
+# Table of Contents
+# x
+# x
 
-#Installation Instructions:
-##Prerequisites - Any required software or libraries (e.g., JBrowse2, AWS setup).
-##Database Installer Setup - Step-by-step instructions on how to download and set up the database installer.
-##Running the Database - Instructions to launch the JBrowse2 instance and customize configurations.
+# Installation Instructions:
+## Prerequisites - Any required software or libraries (e.g., JBrowse2, AWS setup).
+## Database Installer Setup - Step-by-step instructions on how to download and set up the database installer.
+## Running the Database - Instructions to launch the JBrowse2 instance and customize configurations.
 
-#Data Sources - Describe data sources used, with clear distinctions between external sources and any self-generated data.
+# Data Sources - Describe data sources used, with clear distinctions between external sources and any self-generated data.
 
-#Usage Guide:
-Navigating JBrowse2 - Explain navigation options, annotation tracks, and visualization tools.
-Customizing Data Views - Instructions for users to customize the data (e.g., adding new viral strains).
+# Usage Guide:
+## Navigating JBrowse2 - Explain navigation options, annotation tracks, and visualization tools.
+## Customizing Data Views - Instructions for users to customize the data (e.g., adding new viral strains).
 
-#Collaborator Contributions - Brief statements on each team member’s contributions.
+# Collaborator Contributions - Brief statements on each team member’s contributions.
 

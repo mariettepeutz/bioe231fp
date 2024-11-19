@@ -3,7 +3,7 @@
 
 ### This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
 
-### We chose to focus on the Flavivirus family due to the increasing global health threats posed by viruses like Zika, with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
+### We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
 
 ## Dengue Virus (DENV): 
 ### A major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change and increasing prevalence in the Americas and Asia.

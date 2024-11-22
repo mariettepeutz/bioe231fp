@@ -72,7 +72,7 @@ cat $DATA_DIR/*_genomic.fna > $DATA_DIR/combined_genomes.fasta
 
 sudo apt install seqkit
 
-seqkit split -p 3 $DATA_DIR/combined_genomes.fasta -o $DATA_DIR/split
+seqkit split -p 3 $DATA_DIR/combined_genomes.fasta --out-dir $DATA_DIR/split --force
 
 #run muscle 
 for file in $DATA_DIR/split/*.fasta; do

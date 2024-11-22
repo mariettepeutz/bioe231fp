@@ -17,7 +17,7 @@ sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
 export ANNOTATION_URL=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz
 
 #Download and extract test sequence
-export 
+
 export FASTA_ROOT=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz
 wget $FASTA_ROOT -O viral_genome.fna.gz
 gunzip viral_genome.fna.gz

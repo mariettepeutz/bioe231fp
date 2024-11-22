@@ -1,0 +1,94 @@
+#!/bin/bash
+
+#Assuming you have an Apache server running and jbrowse installed [link to external instructions: XXX]
+
+brew install samtools htslib # Assuming you have brew installed, adapt instructions
+
+export APACHE_ROOT='/var/www/html' # Set to your own Apache root, adapt instructions
+#if you need to find the folder then use this sudo find / -name "www" 2>/dev/null
+
+mkdir ~/tmp
+cd ~/tmp
+jbrowse create output_folder
+sudo mv output_folder $APACHE_ROOT/jbrowse2
+sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
+
+#Download and extract test sequence
+
+export FASTA_ROOT=https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz
+wget $FASTA_ROOT -O viral_genome.fna.gz
+gunzip viral_genome.fna.gz
+samtools faidx viral_genome.fna
+jbrowse add-assembly viral_genome.fna --out $APACHE_ROOT/jbrowse2 --load copy
+wget $ANNOTATION_URL -O viral_annotations.gff.gz
+
+# Next section: Download and extract the 3 Dengue genomes
+
+sudo apt install ncbi-entrez-direct
+sudo apt install muscle
+
+# Set JBrowse directory
+export JBROWSE_DIR="$APACHE_ROOT/jbrowse2"
+export DATA_DIR="$JBROWSE_DIR/data"
+
+# Ensure the JBrowse directory exists
+mkdir -p $JBROWSE_DIR
+mkdir -p $DATA_DIR
+
+# Set genome identifiers
+GENOMES=("OR771147.1" "OR486055.1" "OQ821525")
+
+# Download and process genomes
+for GENOME in "${GENOMES[@]}"; do
+    echo "Processing genome: $GENOME"
+
+    # Download FASTA with NCBI eDirect
+    esearch -db nucleotide -query "$GENOME" | efetch -format fasta > $DATA_DIR/${GENOME}_genomic.fna
+
+    # Index FASTA
+    samtools faidx $DATA_DIR/${GENOME}_genomic.fna
+
+    # Add assembly to JBrowse
+    jbrowse add-assembly $DATA_DIR/${GENOME}_genomic.fna --out $JBROWSE_DIR --load copy
+
+    # Download GFF
+    esearch -db nucleotide -query "$GENOME" | efetch -format gff > $DATA_DIR/${GENOME}_genomic.gff
+
+    # Add track to JBrowse, explicitly associate with the correct assembly
+    jbrowse add-track $DATA_DIR/${GENOME}_genomic.gff \
+        --out $JBROWSE_DIR \
+        --load copy \
+        --trackId "${GENOME}_annotations" \
+        --name "${GENOME} Annotations" \
+        --assemblyNames "$GENOME"
+done
+
+# Combine FASTA files for MSA
+echo "Combining FASTA files for MSA..."
+cat $DATA_DIR/*_genomic.fna > $DATA_DIR/combined_genomes.fasta
+
+sudo apt install seqkit
+
+seqkit split -p 3 $DATA_DIR/combined_genomes.fasta -o $DATA_DIR/split
+
+#run muscle 
+for file in $DATA_DIR/split/*.fasta; do muscle -align $file -output ${file%.fasta}.stockholm -format stockholm -threads 1 done
+
+# Combine the split files back
+cat $DATA_DIR/split/*.stockholm > $DATA_DIR/alignment.stockholm
+
+ls -lh $DATA_DIR/alignment.stockholm
+head -n 20 $DATA_DIR/alignment.stockholm
+
+# Add MSA plugin, creating 'plugins' array if it doesn't exist
+echo "Adding MSA plugin to JBrowse configuration..."
+if ! jq 'has("plugins")' $JBROWSE_DIR/config.json | grep -q true; then
+    # If 'plugins' section is missing, add it
+    jq '. + {"plugins": []}' $JBROWSE_DIR/config.json > $DATA_DIR/temp_config.json && mv $DATA_DIR/temp_config.json $JBROWSE_DIR/config.json
+fi
+
+# Now add the MSA plugin
+jq '.plugins += [{"name": "MsaView", "url": "https://unpkg.com/jbrowse-plugin-msaview/dist/jbrowse-plugin-msaview.umd.production.min.js"}]' \
+    $JBROWSE_DIR/config.json > $DATA_DIR/temp_config.json && mv $DATA_DIR/temp_config.json $JBROWSE_DIR/config.json
+
+echo "MSA plugin added to configuration."

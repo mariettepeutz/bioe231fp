@@ -75,7 +75,10 @@ sudo apt install seqkit
 seqkit split -p 3 $DATA_DIR/combined_genomes.fasta -o $DATA_DIR/split
 
 #run muscle 
-for file in $DATA_DIR/split/*.fasta; do muscle -align $file -output ${file%.fasta}.stockholm -format stockholm -threads 1 done
+for file in $DATA_DIR/split/*.fasta; do
+    muscle -align $file -output ${file%.fasta}.stockholm
+done
+
 
 # Combine the split files back
 cat $DATA_DIR/split/*.stockholm > $DATA_DIR/alignment.stockholm

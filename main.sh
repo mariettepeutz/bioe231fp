@@ -63,7 +63,7 @@ bowtie2-build viral_genome.fa viral_genome
 check_error
 
 echo "Adding reference genome assembly to JBrowse..."
-jbrowse add-assembly viral_genome.fa --out /path/to/your/apache/root/jbrowse2 --load copy
+jbrowse add-assembly viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 # Download and Process Annotations #
@@ -88,7 +88,7 @@ tabix genes.gff.gz
 check_error
 
 echo "Adding annotations track to JBrowse..."
-jbrowse add-track genes.gff.gz --out /path/to/your/apache/root/jbrowse2 --load copy
+jbrowse add-track genes.gff.gz --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 echo "Reference dengue genome and annotations successfully added to JBrowse."
@@ -123,7 +123,7 @@ check_error
 
 echo "Adding alignment track to JBrowse..."
 # Add the BAM file (alignment data) as a new track to JBrowse.
-jbrowse add-track comparison_genome.sorted.bam --out /path/to/your/apache/root/jbrowse2 --load copy
+jbrowse add-track comparison_genome.sorted.bam --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 echo "Comparison genome alignment successfully added to JBrowse."

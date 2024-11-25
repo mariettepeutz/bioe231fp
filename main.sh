@@ -1,6 +1,6 @@
 ### Dengue JBrowse Database Code ###
 
-# Helper function for error handling
+# Helper function for error handling - exits the code in case something goes wrong!
 check_error() {
     if [ $? -ne 0 ]; then
         echo "Error encountered in previous command. Exiting."

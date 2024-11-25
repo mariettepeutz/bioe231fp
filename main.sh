@@ -95,7 +95,7 @@ echo "Reference dengue genome and annotations successfully added to JBrowse."
 
 # Align Comparison Genome to Reference Genome #
 echo "Downloading comparison genome FASTA file..."
-wget -q "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000862125.1/download?include_annotation_type=GENOME_FASTA&hydrated=FULLY_HYDRATED" -O comparison_genome.fna
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O comparison_genome.fna
 check_error
 
 echo "Aligning comparison genome to reference genome using Bowtie2..."

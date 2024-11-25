@@ -1,5 +1,34 @@
 #!/bin/bash
 
+""" Instructions for running the script:
+
+1. Ensure you have created the APACHE_ROOT environment variable pointing to your Apache root directory.
+   Example: export APACHE_ROOT='/path/to/apache/root'
+   If you're unsure of the correct path, you can find it by running:
+   sudo find / -name "www" 2>/dev/null
+
+2. Navigate to a temporary working directory (e.g., ~/tmp) to clone the repository.
+   mkdir ~/tmp (if you haven't already)
+   cd ~/tmp
+
+3. Clone the repository containing the script:
+   git clone https://github.com/mariettepeutz/bioe231fp.git
+
+4. Move into the repository directory:
+   cd bioe231fp
+
+5. Make the script executable:
+   chmod +x main.sh
+
+6. Run the script:
+   ./main.sh
+   Ensure you have all required dependencies installed, such as wget, samtools, bowtie2, and jbrowse.
+
+Additional Notes:
+- The script assumes you have a JBrowse2 instance installed in the $APACHE_ROOT/jbrowse2 directory.
+- If any errors occur, the script will exit and display an error message.
+"""
+
 """Dengue"""
 
 # Helper function for error handling - exits the code in case something goes wrong!

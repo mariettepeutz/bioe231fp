@@ -71,10 +71,6 @@ echo "Indexing reference genome file with samtools..."
 samtools faidx $WORKDIR/viral_genome.fa
 check_error
 
-echo "Building Bowtie2 index for reference genome..."
-bowtie2-build $WORKDIR/viral_genome.fa $WORKDIR/viral_genome
-check_error
-
 echo "Adding single-stranded RNA reference genome assembly to JBrowse..."
 jbrowse add-assembly $WORKDIR/viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
@@ -107,32 +103,39 @@ check_error
 echo "Reference dengue genome and annotations successfully added to JBrowse."
 
 ### Align Comparison Genome to Reference Genome ###
-echo "Downloading comparison genome FASTA file..."
-wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O $WORKDIR/comparison_genome.fna
+
+echo "Preparing reference genome..."
+bowtie2-build $WORKDIR/reference_genome.fasta $WORKDIR/viral_genome
 check_error
 
+echo "Downloading and decompressing comparison genome..."
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O $WORKDIR/comparison_genome.fna.gz
+check_error 
+
+gunzip $WORKDIR/comparison_genome.fna.gz
+check_error 
+
 echo "Aligning comparison genome to reference genome using Bowtie2..."
-bowtie2 -x $WORKDIR/viral_genome -f $WORKDIR/comparison_genome.fna -S $WORKDIR/comparison_genome.sam
-check_error
+bowtie2 -x $WORKDIR/viral_genome --fasta $WORKDIR/comparison_genome.fna -S $WORKDIR/comparison_genome.sam
+check_error 
 
 echo "Converting SAM file to BAM file..."
 samtools view -bS $WORKDIR/comparison_genome.sam > $WORKDIR/comparison_genome.bam
-check_error
+check_error 
 
 echo "Sorting BAM file..."
 samtools sort $WORKDIR/comparison_genome.bam -o $WORKDIR/comparison_genome.sorted.bam
-check_error
+check_error 
 
 echo "Indexing BAM file..."
 samtools index $WORKDIR/comparison_genome.sorted.bam
-check_error
+check_error 
 
 echo "Adding alignment track to JBrowse..."
 jbrowse add-track $WORKDIR/comparison_genome.sorted.bam --out $APACHE_ROOT/jbrowse2 --load copy
-check_error
+check_error 
 
 echo "Comparison genome alignment successfully added to JBrowse."
-
 
 #basic code
 # # Upload main Dengue genome

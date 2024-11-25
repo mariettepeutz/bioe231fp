@@ -29,7 +29,7 @@ Additional Notes:
 - If any errors occur, the script will exit and display an error message.
 """
 
-"""Dengue"""
+### Dengue ###
 
 # Helper function for error handling - exits the code in case something goes wrong!
 check_error() {

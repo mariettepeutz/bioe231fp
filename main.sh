@@ -31,7 +31,9 @@ Additional Notes:
 
 ### Dengue ###
 
-# Helper function for error handling - exits the code in case something goes wrong!
+#!/bin/bash
+
+# Helper function for error handling
 check_error() {
     if [ $? -ne 0 ]; then
         echo "Error encountered in previous command. Exiting."
@@ -39,91 +41,94 @@ check_error() {
     fi
 }
 
-# Download and Process the Reference Genome #
+### Define Directories ###
+# Set the working directory to the bioe231fp folder
+WORKDIR=$(pwd)  # Assumes the script is run from the bioe231fp folder
+APACHE_ROOT=/opt/homebrew/var/www
+
+echo "Working directory set to: $WORKDIR"
+
+# Ensure Apache root is defined
+if [ ! -d "$APACHE_ROOT/jbrowse2" ]; then
+    echo "Error: JBrowse2 not found at $APACHE_ROOT/jbrowse2. Please check your APACHE_ROOT variable."
+    exit 1
+fi
+
+### Download and Process the Reference Genome ###
 echo "Downloading Dengue genome (reference genome)..."
-wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O genome.fna.gz
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O $WORKDIR/genome.fna.gz
 check_error
 
 echo "Decompressing reference genome file..."
-gunzip genome.fna.gz
+gunzip -f $WORKDIR/genome.fna.gz
 check_error
 
 echo "Renaming reference genome file..."
-mv genome.fna viral_genome.fa
+mv $WORKDIR/genome.fna $WORKDIR/viral_genome.fa
 check_error
 
 echo "Indexing reference genome file with samtools..."
-samtools faidx viral_genome.fa
+samtools faidx $WORKDIR/viral_genome.fa
 check_error
 
 echo "Building Bowtie2 index for reference genome..."
-# Bowtie2 requires an indexed version of the reference genome for alignment
-# The `bowtie2-build` command generates an index based on the reference genome
-bowtie2-build viral_genome.fa viral_genome
+bowtie2-build $WORKDIR/viral_genome.fa $WORKDIR/viral_genome
 check_error
 
 echo "Adding reference genome assembly to JBrowse..."
-jbrowse add-assembly viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-assembly $WORKDIR/viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
-# Download and Process Annotations #
+### Download and Process Annotations ###
 echo "Downloading genome annotations..."
-wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz" -O annotations.gff.gz
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz" -O $WORKDIR/annotations.gff.gz
 check_error
 
 echo "Decompressing annotations file..."
-gunzip annotations.gff.gz
+gunzip -f $WORKDIR/annotations.gff.gz
 check_error
 
 echo "Sorting GFF3 annotations..."
-jbrowse sort-gff annotations.gff > genes.gff
+jbrowse sort-gff $WORKDIR/annotations.gff > $WORKDIR/genes.gff
 check_error
 
 echo "Compressing sorted GFF3 file..."
-bgzip genes.gff
+bgzip -f $WORKDIR/genes.gff
 check_error
 
 echo "Indexing compressed GFF3 file with tabix..."
-tabix genes.gff.gz
+tabix $WORKDIR/genes.gff.gz
 check_error
 
 echo "Adding annotations track to JBrowse..."
-jbrowse add-track genes.gff.gz --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-track $WORKDIR/genes.gff.gz --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 echo "Reference dengue genome and annotations successfully added to JBrowse."
 
-# Align Comparison Genome to Reference Genome #
+### Align Comparison Genome to Reference Genome ###
 echo "Downloading comparison genome FASTA file..."
-wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O comparison_genome.fna
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O $WORKDIR/comparison_genome.fna
 check_error
 
 echo "Aligning comparison genome to reference genome using Bowtie2..."
-# Bowtie2 aligns the comparison genome (FASTA format) to the reference genome.
-# The `-x viral_genome` specifies the reference genome index created earlier.
-# The `-f comparison_genome.fna` specifies the input file (FASTA format).
-# The output is saved as a SAM file (`comparison_genome.sam`), which contains the alignment data.
-bowtie2 -x viral_genome -f comparison_genome.fna -S comparison_genome.sam
+bowtie2 -x $WORKDIR/viral_genome -f $WORKDIR/comparison_genome.fna -S $WORKDIR/comparison_genome.sam
 check_error
 
 echo "Converting SAM file to BAM file..."
-# Convert the SAM file (text-based) to BAM format (binary, optimized for storage and speed).
-samtools view -bS comparison_genome.sam > comparison_genome.bam
+samtools view -bS $WORKDIR/comparison_genome.sam > $WORKDIR/comparison_genome.bam
 check_error
 
 echo "Sorting BAM file..."
-# Sort the BAM file for proper visualization in JBrowse.
-samtools sort comparison_genome.bam -o comparison_genome.sorted.bam
+samtools sort $WORKDIR/comparison_genome.bam -o $WORKDIR/comparison_genome.sorted.bam
 check_error
 
 echo "Indexing BAM file..."
-# Index the BAM file for quick access to specific regions during visualization.
-samtools index comparison_genome.sorted.bam
+samtools index $WORKDIR/comparison_genome.sorted.bam
 check_error
 
 echo "Adding alignment track to JBrowse..."
-# Add the BAM file (alignment data) as a new track to JBrowse.
-jbrowse add-track comparison_genome.sorted.bam --out $APACHE_ROOT/jbrowse2 --load copy
+jbrowse add-track $WORKDIR/comparison_genome.sorted.bam --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 echo "Comparison genome alignment successfully added to JBrowse."

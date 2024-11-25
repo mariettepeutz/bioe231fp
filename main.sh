@@ -41,7 +41,7 @@ check_error() {
 
 # Download and Process the Reference Genome #
 echo "Downloading Dengue genome (reference genome)..."
-# this is wrong!! wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O genome.fna.gz
+wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O genome.fna.gz
 check_error
 
 echo "Decompressing reference genome file..."

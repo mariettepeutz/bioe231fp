@@ -105,18 +105,15 @@ echo "Reference dengue genome and annotations successfully added to JBrowse."
 ### Align Comparison Genome to Reference Genome ###
 
 echo "Preparing reference genome..."
-bowtie2-build $WORKDIR/reference_genome.fasta $WORKDIR/viral_genome
+bowtie2-build $WORKDIR/viral_genome.fa $WORKDIR/viral_genome
 check_error
 
 echo "Downloading and decompressing comparison genome..."
-wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O $WORKDIR/comparison_genome.fna.gz
-check_error 
-
-gunzip $WORKDIR/comparison_genome.fna.gz
+wget "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OR486055.1&report=fasta&format=text" -O dengue_virus1.fa
 check_error 
 
 echo "Aligning comparison genome to reference genome using Bowtie2..."
-bowtie2 -x $WORKDIR/viral_genome --fasta $WORKDIR/comparison_genome.fna -S $WORKDIR/comparison_genome.sam
+bowtie2 -x $WORKDIR/viral_genome -f $WORKDIR/dengue_virus1.fa -S $WORKDIR/comparison_genome.sam
 check_error 
 
 echo "Converting SAM file to BAM file..."

@@ -75,8 +75,8 @@ echo "Building Bowtie2 index for reference genome..."
 bowtie2-build $WORKDIR/viral_genome.fa $WORKDIR/viral_genome
 check_error
 
-echo "Adding reference genome assembly to JBrowse..."
-jbrowse add-assembly $WORKDIR/viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
+echo "Adding single-stranded RNA reference genome assembly to JBrowse..."
+jbrowse add-assembly $WORKDIR/viral_genome.fa --type RNA --out $APACHE_ROOT/jbrowse2 --load copy
 check_error
 
 ### Download and Process Annotations ###

@@ -1,4 +1,6 @@
-### Dengue JBrowse Database Code ###
+#!/bin/bash
+
+"""Dengue"""
 
 # Helper function for error handling - exits the code in case something goes wrong!
 check_error() {
@@ -8,28 +10,34 @@ check_error() {
     fi
 }
 
-# Download and process the main genome (DENV-2 with V91A mutation)
-echo "Downloading Dengue genome..."
+# Download and Process the Reference Genome #
+echo "Downloading Dengue genome (reference genome)..."
 wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" -O genome.fna.gz
 check_error
 
-echo "Decompressing genome file..."
+echo "Decompressing reference genome file..."
 gunzip genome.fna.gz
 check_error
 
-echo "Renaming genome file..."
+echo "Renaming reference genome file..."
 mv genome.fna viral_genome.fa
 check_error
 
-echo "Indexing genome file with samtools..."
+echo "Indexing reference genome file with samtools..."
 samtools faidx viral_genome.fa
 check_error
 
-echo "Adding genome assembly to JBrowse..."
+echo "Building Bowtie2 index for reference genome..."
+# Bowtie2 requires an indexed version of the reference genome for alignment
+# The `bowtie2-build` command generates an index based on the reference genome
+bowtie2-build viral_genome.fa viral_genome
+check_error
+
+echo "Adding reference genome assembly to JBrowse..."
 jbrowse add-assembly viral_genome.fa --out /path/to/your/apache/root/jbrowse2 --load copy
 check_error
 
-# Download and process annotations
+# Download and Process Annotations #
 echo "Downloading genome annotations..."
 wget -q "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz" -O annotations.gff.gz
 check_error
@@ -54,7 +62,43 @@ echo "Adding annotations track to JBrowse..."
 jbrowse add-track genes.gff.gz --out /path/to/your/apache/root/jbrowse2 --load copy
 check_error
 
-echo "Genome and annotations successfully added to JBrowse for main Dengue genome (DENV-2 with V91A mutation)."
+echo "Reference dengue genome and annotations successfully added to JBrowse."
+
+# Align Comparison Genome to Reference Genome #
+echo "Downloading comparison genome FASTA file..."
+wget -q "https://api.ncbi.nlm.nih.gov/datasets/v2/genome/accession/GCF_000862125.1/download?include_annotation_type=GENOME_FASTA&hydrated=FULLY_HYDRATED" -O comparison_genome.fna
+check_error
+
+echo "Aligning comparison genome to reference genome using Bowtie2..."
+# Bowtie2 aligns the comparison genome (FASTA format) to the reference genome.
+# The `-x viral_genome` specifies the reference genome index created earlier.
+# The `-f comparison_genome.fna` specifies the input file (FASTA format).
+# The output is saved as a SAM file (`comparison_genome.sam`), which contains the alignment data.
+bowtie2 -x viral_genome -f comparison_genome.fna -S comparison_genome.sam
+check_error
+
+echo "Converting SAM file to BAM file..."
+# Convert the SAM file (text-based) to BAM format (binary, optimized for storage and speed).
+samtools view -bS comparison_genome.sam > comparison_genome.bam
+check_error
+
+echo "Sorting BAM file..."
+# Sort the BAM file for proper visualization in JBrowse.
+samtools sort comparison_genome.bam -o comparison_genome.sorted.bam
+check_error
+
+echo "Indexing BAM file..."
+# Index the BAM file for quick access to specific regions during visualization.
+samtools index comparison_genome.sorted.bam
+check_error
+
+echo "Adding alignment track to JBrowse..."
+# Add the BAM file (alignment data) as a new track to JBrowse.
+jbrowse add-track comparison_genome.sorted.bam --out /path/to/your/apache/root/jbrowse2 --load copy
+check_error
+
+echo "Comparison genome alignment successfully added to JBrowse."
+
 
 #basic code
 # # Upload main Dengue genome

@@ -34,14 +34,15 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 5. Create a temporary working directory (if you haven't already) and navigate to it:
 
-      mkdir ~/tmp
-      cd ~/tmp
+       mkdir ~/tmp\
+   
+       cd ~/tmp
 
 7. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
 
-      jbrowse create output_folder
-      sudo mv output_folder $APACHE_ROOT/jbrowse2
-      sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
+       jbrowse create output_folder
+       sudo mv output_folder $APACHE_ROOT/jbrowse2
+       sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
 
 9. Test your JBrowse2 installation by opening the browser and typing in:
    
@@ -49,16 +50,19 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 10. Clone the repository containing the script:
    
-   git clone https://github.com/mariettepeutz/bioe231fp.git
+        git clone https://github.com/mariettepeutz/bioe231fp.git
 
 11. Move into the repository directory:
-   cd bioe231fp
 
-12. Make the script executable:
-   chmod +x main.sh
+        cd bioe231fp
 
-13. Run the script:
-   ./main.sh
+13. Make the script executable:
+
+        chmod +x main.sh
+
+15. Run the script:
+
+        ./main.sh
 
 ---
 

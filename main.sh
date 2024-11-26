@@ -17,7 +17,6 @@
    Note: This script assumes the default macOS Apache root directory: `/opt/homebrew/var/www`.
 
 3. Navigate to a temporary working directory (e.g., ~/tmp) to clone the repository:
-   mkdir ~/tmp (if you haven't already)
    cd ~/tmp
 
 4. Clone the repository containing the script:

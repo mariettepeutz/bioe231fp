@@ -1,7 +1,49 @@
 # The Flavi Fighters
 ## BioE231 Final Project by Smrithi Surender, Marriëtte Peutz, & Kate Barouch
 
-### This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
+This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
+
+""" Instructions for running the script:
+
+1. Install all necessary dependencies:
+   Run the following command to install `wget`, `samtools`, `bowtie2`, `jbrowse`, and other essential tools:
+      bash requirements.txt
+
+2. Set the APACHE_ROOT environment variable:
+   Ensure you have created the `APACHE_ROOT` environment variable pointing to your Apache root directory.
+   Example:
+       export APACHE_ROOT='/path/to/apache/root'
+
+   If you're unsure of the correct path, run the following command to locate your Apache root directory:
+       sudo find / -name "www" 2>/dev/null
+
+3. Create a temporary working directory (if you haven't already) and navigate to it:
+      mkdir ~/tmp
+      cd ~/tmp
+
+4. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
+      jbrowse create output_folder
+      sudo mv output_folder $APACHE_ROOT/jbrowse2
+      sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
+
+5. Test your JBrowse2 installation by opening the browser and typing in:
+      http://localhost/jbrowse2/
+
+6. Clone the repository containing the script:
+   git clone https://github.com/mariettepeutz/bioe231fp.git
+
+7. Move into the repository directory:
+   cd bioe231fp
+
+8. Make the script executable:
+   chmod +x main.sh
+
+9. Run the script:
+   ./main.sh
+
+Additional Notes:
+- If any errors occur, the script will exit and display an error message.
+"""
 
 ### We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
 

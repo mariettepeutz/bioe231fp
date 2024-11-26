@@ -3,6 +3,15 @@
 
 This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
 
+## **Table of Contents**
+1. [Instructions for Running the Script](#instructions-for-running-the-script)
+2. [The Flavivirus Family](#the-flavivirus-family)
+3. [Data Sources](#data-sources)
+4. [Usage Guide](#usage-guide)
+5. [Collaborator Contributions](#collaborator-contributions)
+
+---
+
 ## Instructions for running the script:
 
 1. Install all necessary dependencies:
@@ -43,6 +52,8 @@ This project provides a customizable database installer for JBrowse2, focused on
 11. Run the script:
    ./main.sh
 
+---
+
 ## Flavivirus Family
 
 We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
@@ -56,21 +67,42 @@ Recognized for causing severe congenital outcomes like microcephaly, it is inclu
 ### West Nile Virus (WNV): 
 A widespread virus transmitted by Culex mosquitoes, with severe neurological complications in some cases, and no available vaccine, underscoring the importance of further research.
 
-# Need to finish writing this section as we go!
-## Table of Contents
-### x
-### x
+---
 
-## Installation Instructions:
-### Prerequisites - Any required software or libraries (e.g., JBrowse2, AWS setup).
-### Database Installer Setup - Step-by-step instructions on how to download and set up the database installer.
-### Running the Database - Instructions to launch the JBrowse2 instance and customize configurations.
+## **Data Sources**
 
-## Data Sources - Describe data sources used, with clear distinctions between external sources and any self-generated data.
+### **External Data Sources**:
+- Genome sequences and annotations were retrieved from the NCBI FTP repository.
+- Specific data includes genomic FASTA files and GFF annotation files for Dengue, Zika, and West Nile viruses.
 
-## Usage Guide:
-### Navigating JBrowse2 - Explain navigation options, annotation tracks, and visualization tools.
-### Customizing Data Views - Instructions for users to customize the data (e.g., adding new viral strains).
+#### **Example Links**:
+- **Dengue**: [NCBI Genome Reference](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/)
 
-## Collaborator Contributions - Brief statements on each team member’s contributions.
+### **Self-Generated Data**:
+- Alignments between reference and comparison genomes.
+- Custom annotations generated using JBrowse2 tools.
 
+---
+
+## **Usage Guide**
+
+### **Navigating JBrowse2**
+- **Reading Frames**: Explore six reading frames (three forward and three reverse).
+- **Annotation Tracks**: View genome annotations (e.g., genes, regulatory regions).
+- **Alignment Tracks**: Analyze alignment tracks for insights into viral evolution.
+
+### **Customizing Data Views**
+- Add new viral strains by processing and uploading FASTA and GFF files using the provided tools.
+
+---
+
+## **Collaborator Contributions**
+
+### **Smrithi Surender**:
+- 
+
+### **Marriëtte Peutz**:
+- 
+
+### **Kate Barouch**:
+- 

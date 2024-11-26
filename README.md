@@ -113,11 +113,14 @@ A widespread virus transmitted by Culex mosquitoes, with severe neurological com
 
 ## **Collaborator Contributions**
 
+### **Kate Barouch**:
+- 
+
 ### **Smrithi Surender**:
 - 
 
 ### **Marriëtte Peutz**:
 - 
 
-### **Kate Barouch**:
+
 - 

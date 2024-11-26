@@ -44,16 +44,18 @@ This project provides a customizable database installer for JBrowse2, focused on
 Additional Notes:
 - If any errors occur, the script will exit and display an error message.
 
-### We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
+## Flavivirus Family
 
-## Dengue Virus (DENV): 
-### A major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change and increasing prevalence in the Americas and Asia.
+We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
 
-## Zika Virus (ZIKV): 
-### Recognized for causing severe congenital outcomes like microcephaly, it is included on the WHO priority list for diseases with epidemic potential, and there is currently no vaccine available.
+### Dengue Virus (DENV): 
+A major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change and increasing prevalence in the Americas and Asia.
 
-## West Nile Virus (WNV): 
-### A widespread virus transmitted by Culex mosquitoes, with severe neurological complications in some cases, and no available vaccine, underscoring the importance of further research.
+### Zika Virus (ZIKV): 
+Recognized for causing severe congenital outcomes like microcephaly, it is included on the WHO priority list for diseases with epidemic potential, and there is currently no vaccine available.
+
+### West Nile Virus (WNV): 
+A widespread virus transmitted by Culex mosquitoes, with severe neurological complications in some cases, and no available vaccine, underscoring the importance of further research.
 
 # Need to finish writing this section as we go!
 ## Table of Contents

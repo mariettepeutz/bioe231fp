@@ -89,10 +89,10 @@ A widespread virus transmitted by Culex mosquitoes, with severe neurological com
 ### **Navigating JBrowse2**
 - **Reading Frames**: Explore six reading frames (three forward and three reverse).
 - **Annotation Tracks**: View genome annotations (e.g., genes, regulatory regions).
-- **Alignment Tracks**: Analyze alignment tracks for insights into viral evolution.
+- **Alignment Tracks**: Analyze alignment tracks for insights into different viral strains.
 
 ### **Customizing Data Views**
-- Add new viral strains by processing and uploading FASTA and GFF files using the provided tools.
+
 
 ---
 

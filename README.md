@@ -3,7 +3,7 @@
 
 This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
 
-""" Instructions for running the script:
+## Instructions for running the script:
 
 1. Install all necessary dependencies:
    Run the following command to install `wget`, `samtools`, `bowtie2`, `jbrowse`, and other essential tools:
@@ -43,7 +43,6 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 Additional Notes:
 - If any errors occur, the script will exit and display an error message.
-"""
 
 ### We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
 

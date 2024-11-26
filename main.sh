@@ -13,8 +13,6 @@
 
    If you're unsure of the correct path, run the following command to locate your Apache root directory:
        sudo find / -name "www" 2>/dev/null
-       
-   Note: This script assumes the default macOS Apache root directory: `/opt/homebrew/var/www`.
 
 3. Navigate to a temporary working directory (e.g., ~/tmp) to clone the repository:
    cd ~/tmp

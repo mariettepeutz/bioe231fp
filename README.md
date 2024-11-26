@@ -34,35 +34,38 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 6. Set the APACHE_ROOT environment variable:
    Ensure you have created the `APACHE_ROOT` environment variable pointing to your Apache root directory.
-   Example:
+
+      Example:
    
        export APACHE_ROOT='/path/to/apache/root'
+
+   For a normal linux installation, the folder should be /var/www or /var/www/html, whereas when you install on macOS using brew it will likely be in /opt/homebrew/var/www (for M1) or /usr/local/var/www (for Intel). You can run brew --prefix to get the brew install location, and then from there it is in the var/www folder.
 
    If you're unsure of the correct path, run the following command to locate your Apache root directory:
    
        sudo find / -name "www" 2>/dev/null
 
-7. Create a temporary working directory (if you haven't already) and navigate to it:
+8. Create a temporary working directory (if you haven't already) and navigate to it:
 
        mkdir ~/tmp\
    
        cd ~/tmp
 
-8. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
+9. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
 
        jbrowse create output_folder
        sudo mv output_folder $APACHE_ROOT/jbrowse2
        sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
 
-9. Test your JBrowse2 installation by opening the browser and typing in:
+10. Test your JBrowse2 installation by opening the browser and typing in:
    
       http://localhost/jbrowse2/
 
-10. Make the script executable:
+11. Make the script executable:
 
         chmod +x main.sh
 
-11. Run the script:
+12. Run the script:
 
         ./main.sh
 

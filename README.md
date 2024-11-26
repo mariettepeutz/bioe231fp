@@ -27,18 +27,20 @@ This project provides a customizable database installer for JBrowse2, focused on
       sudo chown -R $(whoami) $APACHE_ROOT/jbrowse2
 
 5. Test your JBrowse2 installation by opening the browser and typing in:
+   
       http://localhost/jbrowse2/
 
-6. Clone the repository containing the script:
+7. Clone the repository containing the script:
+   
    git clone https://github.com/mariettepeutz/bioe231fp.git
 
-7. Move into the repository directory:
+9. Move into the repository directory:
    cd bioe231fp
 
-8. Make the script executable:
+10. Make the script executable:
    chmod +x main.sh
 
-9. Run the script:
+11. Run the script:
    ./main.sh
 
 Additional Notes:

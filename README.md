@@ -14,7 +14,15 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 ## Instructions for running the script:
 
-1. Install all necessary dependencies:
+1. Clone the repository containing the script:
+   
+        git clone https://github.com/mariettepeutz/bioe231fp.git
+
+2. Move into the repository directory:
+
+        cd bioe231fp
+   
+4. Install all necessary dependencies:
    Based on your operating system, run the appropriate command to install wget, samtools, bowtie2, jbrowse, and other essential tools:
 
    For macOS:
@@ -22,7 +30,7 @@ This project provides a customizable database installer for JBrowse2, focused on
    For Linux:
       bash linux_requirements.sh
 
-3. Set the APACHE_ROOT environment variable:
+5. Set the APACHE_ROOT environment variable:
    Ensure you have created the `APACHE_ROOT` environment variable pointing to your Apache root directory.
    Example:
    
@@ -32,7 +40,7 @@ This project provides a customizable database installer for JBrowse2, focused on
    
        sudo find / -name "www" 2>/dev/null
 
-5. Create a temporary working directory (if you haven't already) and navigate to it:
+6. Create a temporary working directory (if you haven't already) and navigate to it:
 
        mkdir ~/tmp\
    
@@ -48,19 +56,11 @@ This project provides a customizable database installer for JBrowse2, focused on
    
       http://localhost/jbrowse2/
 
-10. Clone the repository containing the script:
-   
-        git clone https://github.com/mariettepeutz/bioe231fp.git
-
-11. Move into the repository directory:
-
-        cd bioe231fp
-
-13. Make the script executable:
+10. Make the script executable:
 
         chmod +x main.sh
 
-15. Run the script:
+11. Run the script:
 
         ./main.sh
 

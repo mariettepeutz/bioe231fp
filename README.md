@@ -63,6 +63,10 @@ This project provides a customizable database installer for JBrowse2, focused on
 
         ./main.sh
 
+11. Navigate again to your JBrowse installation to see your final visualization of the viral genomes:
+
+      http://localhost:8080/jbrowse2/
+
 ---
 
 ## Flavivirus Family

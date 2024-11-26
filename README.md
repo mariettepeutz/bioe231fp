@@ -43,9 +43,6 @@ This project provides a customizable database installer for JBrowse2, focused on
 11. Run the script:
    ./main.sh
 
-Additional Notes:
-- If any errors occur, the script will exit and display an error message.
-
 ## Flavivirus Family
 
 We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.

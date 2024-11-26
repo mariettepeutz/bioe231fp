@@ -26,11 +26,13 @@ This project provides a customizable database installer for JBrowse2, focused on
    Based on your operating system, run the appropriate command to install wget, samtools, bowtie2, jbrowse, and other essential tools:
 
    For macOS:
-      bash mac_requirements.sh
-   For Linux:
-      bash linux_requirements.sh
 
-5. Set the APACHE_ROOT environment variable:
+       bash mac_requirements.sh
+   For Linux:
+   
+       bash linux_requirements.sh
+
+6. Set the APACHE_ROOT environment variable:
    Ensure you have created the `APACHE_ROOT` environment variable pointing to your Apache root directory.
    Example:
    
@@ -40,13 +42,13 @@ This project provides a customizable database installer for JBrowse2, focused on
    
        sudo find / -name "www" 2>/dev/null
 
-6. Create a temporary working directory (if you haven't already) and navigate to it:
+7. Create a temporary working directory (if you haven't already) and navigate to it:
 
        mkdir ~/tmp\
    
        cd ~/tmp
 
-7. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
+8. Download and copy over JBrowse 2 into the apache2 root dir, setting the owner to the current user with chown:
 
        jbrowse create output_folder
        sudo mv output_folder $APACHE_ROOT/jbrowse2

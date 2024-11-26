@@ -53,7 +53,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 8. Test your JBrowse2 installation by opening the browser and typing in:
    
-      http://localhost/jbrowse2/
+      http://localhost:8080/jbrowse2/
 
 9. Make the script executable:
 

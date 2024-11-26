@@ -5,7 +5,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 ## **Table of Contents**
 1. [Instructions for Running the Script](#instructions-for-running-the-script)
-2. [The Flavivirus Family](#the-flavivirus-family)
+2. [The Flavivirus Family](#flavivirus-family)
 3. [Data Sources](#data-sources)
 4. [Usage Guide](#usage-guide)
 5. [Collaborator Contributions](#collaborator-contributions)

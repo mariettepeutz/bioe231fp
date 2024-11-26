@@ -2,32 +2,41 @@
 
 """ Instructions for running the script:
 
-1. Ensure you have created the APACHE_ROOT environment variable pointing to your Apache root directory.
-   Example: export APACHE_ROOT='/path/to/apache/root'
-   If you're unsure of the correct path, you can find it by running:
-   sudo find / -name "www" 2>/dev/null
+1. Install all necessary dependencies:
+   Run the following command to install `wget`, `samtools`, `bowtie2`, `jbrowse`, and other essential tools:
+      bash requirements.txt
 
-2. Navigate to a temporary working directory (e.g., ~/tmp) to clone the repository.
+2. Set the APACHE_ROOT environment variable:
+   Ensure you have created the `APACHE_ROOT` environment variable pointing to your Apache root directory.
+   Example:
+       export APACHE_ROOT='/path/to/apache/root'
+
+   If you're unsure of the correct path, run the following command to locate your Apache root directory:
+       sudo find / -name "www" 2>/dev/null
+       
+   Note: This script assumes the default macOS Apache root directory: `/opt/homebrew/var/www`.
+
+3. Navigate to a temporary working directory (e.g., ~/tmp) to clone the repository:
    mkdir ~/tmp (if you haven't already)
    cd ~/tmp
 
-3. Clone the repository containing the script:
+4. Clone the repository containing the script:
    git clone https://github.com/mariettepeutz/bioe231fp.git
 
-4. Move into the repository directory:
+5. Move into the repository directory:
    cd bioe231fp
 
-5. Make the script executable:
+6. Make the script executable:
    chmod +x main.sh
 
-6. Run the script:
+7. Run the script:
    ./main.sh
-   Ensure you have all required dependencies installed, such as wget, samtools, bowtie2, and jbrowse.
 
 Additional Notes:
-- The script assumes you have a JBrowse2 instance installed in the $APACHE_ROOT/jbrowse2 directory.
+- The script assumes you have a JBrowse2 instance installed in `$APACHE_ROOT/jbrowse2`.
 - If any errors occur, the script will exit and display an error message.
 """
+
 
 ### Dengue ###
 
@@ -41,16 +50,25 @@ check_error() {
     fi
 }
 
-### Define Directories ###
-# Set the working directory to the bioe231fp folder
-WORKDIR=$(pwd)  # Assumes the script is run from the bioe231fp folder
-APACHE_ROOT=/opt/homebrew/var/www
+### Check Directory and APACHE_ROOT ###
+
+WORKDIR=$(pwd)
+
+# Check if APACHE_ROOT is defined
+if [ -z "$APACHE_ROOT" ]; then
+    echo "Error: APACHE_ROOT is not defined. Please set it using the following command:"
+    echo "export APACHE_ROOT='/path/to/apache/root'"
+    echo "Refer to the instructions in the script header or requirements.txt for details."
+    exit 1
+fi
 
 echo "Working directory set to: $WORKDIR"
+echo "Using Apache root directory: $APACHE_ROOT"
 
-# Ensure Apache root is defined
+# Ensure JBrowse2 directory exists
 if [ ! -d "$APACHE_ROOT/jbrowse2" ]; then
-    echo "Error: JBrowse2 not found at $APACHE_ROOT/jbrowse2. Please check your APACHE_ROOT variable."
+    echo "Error: JBrowse2 not found in $APACHE_ROOT/jbrowse2."
+    echo "Please ensure JBrowse2 is installed and configured correctly."
     exit 1
 fi
 

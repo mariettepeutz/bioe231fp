@@ -148,20 +148,3 @@ jbrowse add-track $WORKDIR/comparison_genome.sorted.bam --out $APACHE_ROOT/jbrow
 check_error 
 
 echo "Comparison genome alignment successfully added to JBrowse."
-
-#basic code
-# # Upload main Dengue genome
-# wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz
-
-# gunzip GCF_000862125.1_ViralProj15306_genomic.fna.gz
-# mv GCF_000862125.1_ViralProj15306_genomic.fna viral_genome.fa
-# samtools faidx viral_genome.fa
-# jbrowse add-assembly viral_genome.fa --out $APACHE_ROOT/jbrowse2 --load copy
-
-# #Uploading annotations
-# wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz
-# gunzip GCF_000862125.1_ViralProj15306_genomic.gff.gz
-# jbrowse sort-gff GCF_000862125.1_ViralProj15306_genomic.gff > genes.gff
-# bgzip genes.gff
-# tabix genes.gff.gz
-# jbrowse add-track genes.gff.gz --out $APACHE_ROOT/jbrowse2 --load copy

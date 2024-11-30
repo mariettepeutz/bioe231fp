@@ -1,13 +1,12 @@
-# The Flavi Fighters
-## BioE231 Final Project by Kate Barouch, Smrithi Surender, & Marriëtte Peutz
+# The Dengue Destroyers
 
-This project provides a customizable database installer for JBrowse2, focused on the Flavivirus family, to support pandemic researchers by integrating genome alignments, annotations, and bioinformatics tools for rapid pathogen identification and evolutionary analysis.
+This project provides a customizable database installer for JBrowse2, focused on the Dengue virus, to support pandemic researchers by integrating genome alignments and annotations for evolutionary analysis.
 
 ## **Table of Contents**
 1. [Instructions for Running the Script](#instructions-for-running-the-script)
-2. [The Flavivirus Family](#flavivirus-family)
+2. [Dengue Virus Background Information](#Dengue-Virus(DENV))
 3. [Data Sources](#data-sources)
-4. [Usage Guide](#usage-guide)
+4. [JBrowse Usage Guide](#JBrowse-usage-guide)
 5. [Collaborator Contributions](#collaborator-contributions)
 
 ---
@@ -16,11 +15,11 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 1. Clone the repository containing the script:
    
-        git clone https://github.com/mariettepeutz/bioe231fp.git
+        git clone https://github.com/katebarouch/FlaviFighters.git
 
 2. Move into the repository directory:
 
-        cd bioe231fp
+        cd FlaviFighters
    
 4. Install all necessary dependencies:
    Based on your operating system, run the appropriate command to install wget, samtools, bowtie2, jbrowse, and other essential tools:
@@ -69,37 +68,27 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 ---
 
-## Flavivirus Family
+## Dengue Virus(DENV)
 
-We chose to focus on the Flavivirus family due to the increasing global health threats posed by this virus family with climate warming expanding mosquito habitats and contributing to outbreaks in new regions.
-
-### Dengue Virus (DENV): 
-A major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change and increasing prevalence in the Americas and Asia.
-
-### Zika Virus (ZIKV): 
-Recognized for causing severe congenital outcomes like microcephaly, it is included on the WHO priority list for diseases with epidemic potential, and there is currently no vaccine available.
-
-### West Nile Virus (WNV): 
-A widespread virus transmitted by Culex mosquitoes, with severe neurological complications in some cases, and no available vaccine, underscoring the importance of further research.
+An increasing and major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change expanding mosquito habitats and contributing to outbreaks in new regions, specifically in the Americas and Asia.
 
 ---
 
-## **Data Sources**
+## Data Sources
 
 ### **External Data Sources**:
 - Genome sequences and annotations were retrieved from the NCBI FTP repository.
-- Specific data includes genomic FASTA files and GFF annotation files for Dengue, Zika, and West Nile viruses.
+- Specific data includes genomic FASTA files and GFF annotation files for Dengue.
 
 #### **Example Links**:
 - **Dengue**: [NCBI Genome Reference](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/)
 
 ### **Self-Generated Data**:
 - Alignments between reference and comparison genomes.
-- Custom annotations generated using JBrowse2 tools.
 
 ---
 
-## **Usage Guide**
+## JBrowse Usage Guide
 
 ### **Navigating JBrowse2**
 - **Reading Frames**: Explore six reading frames (three forward and three reverse).
@@ -108,19 +97,13 @@ A widespread virus transmitted by Culex mosquitoes, with severe neurological com
 
 ### **Customizing Data Views**
 
-
 ---
 
-## **Collaborator Contributions**
+## Collaborator Contributions
+- Smrithi Surender: Led the main data sourcing efforts, conducted literature reviews, and assisted with code development and testing.
 
-### **Kate Barouch**:
-- 
+- Kate Barouch: Led the main coding efforts, contributed to rigorous testing and debugging, reviewed code documentation for JBrowse, and provided support with literature review.
+  
+- Mariette Peutz: Led literature review, contributed to data sourcing efforts, and assisted with with code development and testing.
 
-### **Smrithi Surender**:
-- 
-
-### **Marriëtte Peutz**:
-- 
-
-
-- 
+---

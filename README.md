@@ -19,7 +19,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 2. Move into the repository directory:
 
-        cd FlaviFighters
+        cd bioe231fp
    
 4. Install all necessary dependencies:
    Based on your operating system, run the appropriate command to install wget, samtools, bowtie2, jbrowse, and other essential tools:

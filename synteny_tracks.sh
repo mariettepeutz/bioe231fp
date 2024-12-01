@@ -84,12 +84,16 @@ create_synteny_track() {
     reference_virus_name="$1"
     comparison_virus_name="$2"
 
-   # use minimap2 to create a PAF from your asseblies
-   minimap2 $WORKDIR/${reference_virus_name}_genome.fasta $WORKDIR/${comparison_virus_name}_genome.fasta > ${reference_virus_name}_vs_${comparison_virus_name}.paf
+    echo "Creating synteny track between $reference_virus_name and $comparison_virus_name..."
+    minimap2 "$WORKDIR/${reference_virus_name}_genome.fasta" "$WORKDIR/${comparison_virus_name}_genome.fasta" > "$WORKDIR/${reference_virus_name}_vs_${comparison_virus_name}.paf"
+    check_error
 
-   #add each assembly to jbrowse config
-   jbrowse add-track ?.paf --assemblyNames $reference_virus_name, $comparison_virus_name --load copy --out $APACHE_ROOT/jbrowse2
-   
+    echo "Adding synteny track to JBrowse..."
+    jbrowse add-track "$WORKDIR/${reference_virus_name}_vs_${comparison_virus_name}.paf" \
+        --assemblyNames "$reference_virus_name,$comparison_virus_name" \
+        --load copy \
+        --out "$APACHE_ROOT/jbrowse2"
+    check_error
 }
 
 ### Main Script Execution ###

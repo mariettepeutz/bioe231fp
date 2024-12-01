@@ -35,20 +35,17 @@ fi
 process_reference_genome() {
     virus_name="$1"
     genome_url="$2"
-    echo "Processing $virus_name reference genome..."
-    wget -q "$genome_url" -O "$WORKDIR/${virus_name}_genome.fna.gz"
-    check_error
 
-    echo "Unzipping $virus_name reference genome..."
-    gunzip -f "$WORKDIR/${virus_name}_genome.fna.gz"
+    echo "Processing $virus_name reference genome..."
+    wget "$genome_url" -O "$WORKDIR/${virus_name}_genome.fasta"
     check_error
 
     echo "Indexing $virus_name reference genome..."
-    samtools faidx "$WORKDIR/${virus_name}_genome.fna"
+    samtools faidx "$WORKDIR/${virus_name}_genome.fasta"
     check_error
 
     echo "Adding $virus_name reference genome to JBrowse..."
-    jbrowse add-assembly "$WORKDIR/${virus_name}_genome.fna" --out "$APACHE_ROOT/jbrowse2" --load copy
+    jbrowse add-assembly "$WORKDIR/${virus_name}_genome.fasta" --out "$APACHE_ROOT/jbrowse2" --load copy --name "$virus_name"
     check_error
 }
 

@@ -78,7 +78,7 @@ process_reference_annotation() {
     check_error
 
     echo "Adding $virus_name annotations to JBrowse..."
-    jbrowse add-track "$WORKDIR/${virus_name}_genes.gff.gz" --out "$APACHE_ROOT/jbrowse2" --load copy
+    jbrowse add-track "$WORKDIR/${virus_name}_genes.gff.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
     check_error
 }
 

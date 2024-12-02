@@ -40,9 +40,9 @@ process_reference_genome() {
     wget "$genome_url" -O "$WORKDIR/${virus_name}_genome.fna.gz"
     check_error
 
-    echo "Unzipping $virus_name genome...
+    echo "Unzipping $virus_name genome..."
     gunzip -f "$WORKDIR/${virus_name}_genome.fna.gz"
-    check error
+    check_error
 
     echo "Indexing $virus_name reference genome..."
     samtools faidx "$WORKDIR/${virus_name}_genome.fna"
@@ -54,7 +54,6 @@ process_reference_genome() {
 }
 
 # Function to process a reference annotation
-# needs to be fixed if we no longer recieve zipped files... also don't have links yet
 process_reference_annotation() {
     virus_name="$1"
     annotation_url="$2"
@@ -123,16 +122,15 @@ process_comparison_genome() {
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
 process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
-process_comparison_genome "DENV-1_New_Caledonia-2017-AVS-NC-094" \
+process_comparison_genome "DENV-1" \
     "DENV-1_New_Caledonia-2017-AVS-NC-094" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
-process_comparison_genome "DENV-1_New_Caledonia-2017-AVS-NC-094" \
+process_comparison_genome "DENV-1" \
     "DENV-1_Xishuangbanna_Dai_China" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW386867.1&report=fasta&format=text" 
-process_comparison_genome "DENV-1_New_Caledonia-2017-AVS-NC-094" \
+process_comparison_genome "DENV-1" \
     "DENV-1_Guangzhou_China" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PQ357572.1&report=fasta&format=text"
 
 # Process DENV-2 Genomes
-process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz
-" 
+process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz" 
 process_reference_annotation "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.gff.gz"
 
 process_comparison_genome "DENV-2" \

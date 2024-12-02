@@ -38,10 +38,7 @@ else
 fi
 
 # Install JBrowse CLI
-if ! command -
-bash
-Copy code
-    jbrowse &> /dev/null; then
+if ! command -jbrowse &> /dev/null; then
     echo "JBrowse CLI is not installed. Installing now..."
     sudo npm install -g @jbrowse/cli
 else

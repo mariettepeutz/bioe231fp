@@ -10,7 +10,6 @@ NC_001477.1	RefSeq	regulatory_region	70	78	.	+	.	ID=id-NC_001477.1:70..78;Note=o
 NC_001477.1	RefSeq	promoter	79	94	.	+	.	ID=id-NC_001477.1:79..94;Note=5' upstream AUG region (UAR);gbkey=regulatory;regulatory_class=promoter
 NC_001477.1	RefSeq	stem_loop	79	93	.	+	.	ID=id-NC_001477.1:79..93;Note=stem-loop B (SLB);gbkey=stem_loop
 NC_001477.1	RefSeq	gene	95	10273	.	+	.	ID=gene-DV1_gp1;Dbxref=GeneID:5075725;Name=POLY;gbkey=Gene;gene=POLY;gene_biotype=protein_coding;gene_synonym=polyprotein gene;locus_tag=DV1_gp1
-NC_001477.1	RefSeq	CDS	95	10273	.	+	0	ID=cds-NP_059433.1;Parent=gene-DV1_gp1;Dbxref=GenBank:NP_059433.1,GeneID:5075725;Name=NP_059433.1;gbkey=CDS;gene=POLY;locus_tag=DV1_gp1;product=polyprotein;protein_id=NP_059433.1
 NC_001477.1	RefSeq	mature_protein_region_of_CDS	95	436	.	+	.	ID=id-NP_059433.1:1..114;Dbxref=VBRC:35735;Parent=cds-NP_059433.1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=NP_722457.2
 NC_001477.1	RefSeq	mature_protein_region_of_CDS	95	394	.	+	.	ID=id-NP_059433.1:1..100;Dbxref=VBRC:67793;Note=added by NCBI staff following more recent annotations of this virus sequence;Parent=cds-NP_059433.1;gbkey=Prot;product=capsid protein C;protein_id=NP_722466.2
 NC_001477.1	RefSeq	mature_protein_region_of_CDS	437	934	.	+	.	ID=id-NP_059433.1:115..280;Parent=cds-NP_059433.1;gbkey=Prot;product=membrane glycoprotein precursor prM;protein_id=NP_733807.2

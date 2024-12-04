@@ -143,7 +143,7 @@ process_comparison_genome() {
 
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
-process_reference_annotation_file "DENV-1" "denv1genes.gff3"
+process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3"
 process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
 
 process_comparison_genome "DENV-1" \

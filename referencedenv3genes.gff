@@ -6,19 +6,17 @@
 ##sequence-region NC_075403.1 1 10649
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11070
 NC_075403.1	RefSeq	region	1	10649	.	+	.	ID=NC_075403.1:1..10649;Dbxref=taxon:11070;gbkey=Src;genome=genomic;mol_type=genomic RNA;note=Dominica 1981;strain=814669
-NC_075403.1	RefSeq	gene	102	10265	.	+	.	ID=gene-QKC90_gp1;Dbxref=GeneID:80527631;Name=QKC90_gp1;gbkey=Gene;gene_biotype=protein_coding;locus_tag=QKC90_gp1
-NC_075403.1	RefSeq	CDS	102	10265	.	+	0	ID=cds-YP_010790285.1;Parent=gene-QKC90_gp1;Dbxref=GenBank:YP_010790285.1,GeneID:80527631;Name=YP_010790285.1;gbkey=CDS;locus_tag=QKC90_gp1;product=polyprotein precursor;protein_id=YP_010790285.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	102	440	.	+	.	ID=id-YP_010790285.1:1..113;Parent=cds-YP_010790285.1;gbkey=Prot;product=anchored capsid protein;protein_id=YP_010806561.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	102	398	.	+	.	ID=id-YP_010790285.1:1..99;Parent=cds-YP_010790285.1;gbkey=Prot;product=virion capsid protein;protein_id=YP_010806560.1
-NC_075403.1	RefSeq	propeptide_region_of_CDS	441	938	.	+	.	ID=id-YP_010790285.1:114..279;Parent=cds-YP_010790285.1;gbkey=Prot;product=membrane proprotein prM
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	714	938	.	+	.	ID=id-YP_010790285.1:205..279;Parent=cds-YP_010790285.1;gbkey=Prot;product=membrane protein M;protein_id=YP_010806562.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	939	2423	.	+	.	ID=id-YP_010790285.1:280..774;Parent=cds-YP_010790285.1;gbkey=Prot;product=envelope protein E;protein_id=YP_010806563.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	2424	3479	.	+	.	ID=id-YP_010790285.1:775..1126;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS1 protein;protein_id=YP_010806564.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	3480	4133	.	+	.	ID=id-YP_010790285.1:1127..1344;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS2A protein;protein_id=YP_010806565.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	4134	4523	.	+	.	ID=id-YP_010790285.1:1345..1474;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS2B protein;protein_id=YP_010806566.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	4524	6377	.	+	.	ID=id-YP_010790285.1:1475..2092;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS3 protein;protein_id=YP_010806567.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	6378	6758	.	+	.	ID=id-YP_010790285.1:2093..2219;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS4A protein;protein_id=YP_010806568.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	6759	6827	.	+	.	ID=id-YP_010790285.1:2220..2242;Parent=cds-YP_010790285.1;gbkey=Prot;product=2K protein;protein_id=YP_010806569.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	6828	7562	.	+	.	ID=id-YP_010790285.1:2243..2487;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS4B protein;protein_id=YP_010806570.1
-NC_075403.1	RefSeq	mature_protein_region_of_CDS	7563	10262	.	+	.	ID=id-YP_010790285.1:2488..3387;Parent=cds-YP_010790285.1;gbkey=Prot;product=NS5 protein;protein_id=YP_010806571.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	102	440	.	+	.	ID=id-YP_010790285.1:1..113;gbkey=Prot;product=anchored capsid protein;protein_id=YP_010806561.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	102	398	.	+	.	ID=id-YP_010790285.1:1..99;gbkey=Prot;product=virion capsid protein;protein_id=YP_010806560.1
+NC_075403.1	RefSeq	propeptide_region_of_CDS	441	938	.	+	.	ID=id-YP_010790285.1:114..279;gbkey=Prot;product=membrane proprotein prM
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	714	938	.	+	.	ID=id-YP_010790285.1:205..279;gbkey=Prot;product=membrane protein M;protein_id=YP_010806562.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	939	2423	.	+	.	ID=id-YP_010790285.1:280..774;gbkey=Prot;product=envelope protein E;protein_id=YP_010806563.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	2424	3479	.	+	.	ID=id-YP_010790285.1:775..1126;gbkey=Prot;product=NS1 protein;protein_id=YP_010806564.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	3480	4133	.	+	.	ID=id-YP_010790285.1:1127..1344;gbkey=Prot;product=NS2A protein;protein_id=YP_010806565.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	4134	4523	.	+	.	ID=id-YP_010790285.1:1345..1474;gbkey=Prot;product=NS2B protein;protein_id=YP_010806566.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	4524	6377	.	+	.	ID=id-YP_010790285.1:1475..2092;gbkey=Prot;product=NS3 protein;protein_id=YP_010806567.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	6378	6758	.	+	.	ID=id-YP_010790285.1:2093..2219;gbkey=Prot;product=NS4A protein;protein_id=YP_010806568.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	6759	6827	.	+	.	ID=id-YP_010790285.1:2220..2242;gbkey=Prot;product=2K protein;protein_id=YP_010806569.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	6828	7562	.	+	.	ID=id-YP_010790285.1:2243..2487;gbkey=Prot;product=NS4B protein;protein_id=YP_010806570.1
+NC_075403.1	RefSeq	mature_protein_region_of_CDS	7563	10262	.	+	.	ID=id-YP_010790285.1:2488..3387;gbkey=Prot;product=NS5 protein;protein_id=YP_010806571.1
 ###

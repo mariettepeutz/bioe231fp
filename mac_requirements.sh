@@ -57,7 +57,7 @@ brew install httpd
 
 # 2.2 Start the apache2 server
 echo "Starting apache2 server..."
-brew services start httpd # will try tomorrow without sudo
+sudo brew services start httpd # will try tomorrow without sudo
 
 ### Additional Resources ###
 # - Apache2 setup: https://httpd.apache.org/docs/

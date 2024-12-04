@@ -53,13 +53,13 @@ This project provides a customizable database installer for JBrowse2, focused on
 8. Test your JBrowse2 installation by opening the browser and typing in:
 
    For mac:
-      http://localhost:8080/jbrowse2/
+         http://localhost:8080/jbrowse2/
 
    For AWS: (xx.xxx.xxx.xx is your IP address)
-      http://xx.xxx.xxx.xx/jbrowse2/
+         http://xx.xxx.xxx.xx/jbrowse2/
 
-   For Linus: (xx.xxx.xxx.xx is your IP address)
-      http://xx.xxx.xxx.xx:8080/jbrowse2/
+   For Linux: (xx.xxx.xxx.xx is your IP address)
+         http://xx.xxx.xxx.xx:8080/jbrowse2/
 
 10. Make the script executable:
 
@@ -72,13 +72,13 @@ This project provides a customizable database installer for JBrowse2, focused on
 12. Navigate again to your JBrowse installation to see your final visualization of the viral genomes:
 
    For mac:
-      http://localhost:8080/jbrowse2/
+         http://localhost:8080/jbrowse2/
 
    For AWS: (xx.xxx.xxx.xx is your IP address)
-      http://xx.xxx.xxx.xx/jbrowse2/
+         http://xx.xxx.xxx.xx/jbrowse2/
 
-   For Linus: (xx.xxx.xxx.xx is your IP address)
-      http://xx.xxx.xxx.xx:8080/jbrowse2/
+   For Linux: (xx.xxx.xxx.xx is your IP address)
+         http://xx.xxx.xxx.xx:8080/jbrowse2/
 
 ---
 

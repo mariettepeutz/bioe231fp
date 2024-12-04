@@ -52,7 +52,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 8. Test your JBrowse2 installation by opening the browser and typing in:
 
-   For mac:
+   For macOS:
    
          http://localhost:8080/jbrowse2/
 
@@ -74,7 +74,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 12. Navigate again to your JBrowse installation to see your final visualization of the viral genomes:
 
-      For mac:
+      For macOS:
       
             http://localhost:8080/jbrowse2/
    

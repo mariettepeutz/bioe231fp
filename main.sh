@@ -82,6 +82,29 @@ process_reference_annotation() {
     check_error
 }
 
+process_reference_annotation_file() {
+    virus_name="$1"
+    annotation_url="$2"
+
+    echo "Sorting $virus_name annotations..."
+    jbrowse sort-gff "$WORKDIR/${virus_name}_annotations.gff" > "$WORKDIR/${virus_name}_genes.gff"
+    check_error
+
+    echo "Compressing $virus_name annotations..."
+    bgzip -f "$WORKDIR/${virus_name}_genes.gff"
+    check_error
+
+    echo "Indexing $virus_name annotations..."
+    tabix "$WORKDIR/${virus_name}_genes.gff.gz"
+    check_error
+
+    echo "Adding $virus_name annotations to JBrowse..."
+    jbrowse add-track "$WORKDIR/${virus_name}_gene
+
+    
+
+}
+
 # Function to process comparison genome for alignment track
 process_comparison_genome() {
     reference_virus_name="$1"

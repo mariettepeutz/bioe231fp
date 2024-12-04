@@ -1,0 +1,34 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MW315194.1 1 10745
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11053
+MW315194.1	Genbank	region	1	10745	.	+	.	ID=MW315194.1:1..10745;Dbxref=taxon:11053;collection-date=18-May-2017;country=New Caledonia;gbkey=Src;genotype=1;isolate=New Caledonia-2017-AVS-NC-094;isolation-source=serum;mol_type=genomic RNA;nat-host=Homo sapiens;old-name=Dengue virus 1;serotype=I;type=Dengue virus
+MW315194.1	Genbank	stem_loop	2	69	.	+	.	ID=id-MW315194.1:2..69;Note=stem-loop A (SLA);gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	79	93	.	+	.	ID=id-MW315194.1:79..93;Note=stem-loop B (SLB);gbkey=stem_loop
+MW315194.1	Genbank	gene	95	10273	.	+	.	ID=gene-POLY;Name=POLY;gbkey=Gene;gene=POLY;gene_biotype=protein_coding
+MW315194.1	Genbank	CDS	95	10273	.	+	0	ID=cds-QPK41414.1;Parent=gene-POLY;Dbxref=NCBI_GP:QPK41414.1;Name=QPK41414.1;gbkey=CDS;gene=POLY;product=polyprotein;protein_id=QPK41414.1
+MW315194.1	Genbank	mature_protein_region_of_CDS	95	436	.	+	.	ID=id-QPK41414.1:1..114;Parent=cds-QPK41414.1;gbkey=Prot;product=anchored capsid protein ancC
+MW315194.1	Genbank	mature_protein_region_of_CDS	95	394	.	+	.	ID=id-QPK41414.1:1..100;Parent=cds-QPK41414.1;gbkey=Prot;product=capsid protein C
+MW315194.1	Genbank	mature_protein_region_of_CDS	437	934	.	+	.	ID=id-QPK41414.1:115..280;Parent=cds-QPK41414.1;gbkey=Prot;product=membrane glycoprotein precursor prM
+MW315194.1	Genbank	mature_protein_region_of_CDS	437	709	.	+	.	ID=id-QPK41414.1:115..205;Parent=cds-QPK41414.1;gbkey=Prot;product=protein pr
+MW315194.1	Genbank	mature_protein_region_of_CDS	710	934	.	+	.	ID=id-QPK41414.1:206..280;Parent=cds-QPK41414.1;gbkey=Prot;product=membrane glycoprotein M
+MW315194.1	Genbank	mature_protein_region_of_CDS	935	2419	.	+	.	ID=id-QPK41414.1:281..775;Parent=cds-QPK41414.1;gbkey=Prot;product=envelope protein E
+MW315194.1	Genbank	mature_protein_region_of_CDS	2420	3475	.	+	.	ID=id-QPK41414.1:776..1127;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS1
+MW315194.1	Genbank	mature_protein_region_of_CDS	3476	4129	.	+	.	ID=id-QPK41414.1:1128..1345;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS2A
+MW315194.1	Genbank	mature_protein_region_of_CDS	4130	4519	.	+	.	ID=id-QPK41414.1:1346..1475;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS2B
+MW315194.1	Genbank	mature_protein_region_of_CDS	4520	6376	.	+	.	ID=id-QPK41414.1:1476..2094;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS3
+MW315194.1	Genbank	mature_protein_region_of_CDS	6377	6757	.	+	.	ID=id-QPK41414.1:2095..2221;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS4A
+MW315194.1	Genbank	mature_protein_region_of_CDS	6758	6826	.	+	.	ID=id-QPK41414.1:2222..2244;Parent=cds-QPK41414.1;gbkey=Prot;product=protein 2K
+MW315194.1	Genbank	mature_protein_region_of_CDS	6827	7573	.	+	.	ID=id-QPK41414.1:2245..2493;Parent=cds-QPK41414.1;gbkey=Prot;product=nonstructural protein NS4B
+MW315194.1	Genbank	mature_protein_region_of_CDS	7574	10270	.	+	.	ID=id-QPK41414.1:2494..3392;Parent=cds-QPK41414.1;gbkey=Prot;product=RNA-dependent RNA polymerase NS5
+MW315194.1	Genbank	stem_loop	114	130	.	+	.	ID=id-POLY;Note=capsid region hairpin (cHP);gbkey=stem_loop;gene=POLY
+MW315194.1	Genbank	lnc_RNA	10320	10735	.	+	.	ID=rna-MW315194.1:10320..10735;Note=subgenomic flavivirus RNA;gbkey=ncRNA;product=sfRNA1
+MW315194.1	Genbank	exon	10320	10735	.	+	.	ID=exon-MW315194.1:10320..10735-1;Parent=rna-MW315194.1:10320..10735;Note=subgenomic flavivirus RNA;gbkey=ncRNA;product=sfRNA1
+MW315194.1	Genbank	stem_loop	10324	10389	.	+	.	ID=id-MW315194.1:10324..10389;Note=flaviviral nuclease-resistant RNA 1 (fNR1)%3B also called stem-loop 1 or xrRNA1;gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	10397	10458	.	+	.	ID=id-MW315194.1:10397..10458;Note=flaviviral nuclease-resistant RNA 2 (fNR2)%3B also called stem-loop 2 or xrRNA2;gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	10467	10549	.	+	.	ID=id-MW315194.1:10467..10549;Note=dumbbell 1 (DBI)%3B also called xrRNA3;gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	10551	10633	.	+	.	ID=id-MW315194.1:10551..10633;Note=dumbbell 2 (DBII)%3B also called xrRNA4;gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	10643	10656	.	+	.	ID=id-MW315194.1:10643..10656;Note=short hairpin (sHP);gbkey=stem_loop
+MW315194.1	Genbank	stem_loop	10657	10735	.	+	.	ID=id-MW315194.1:10657..10735;Note=3' stem-loop (3'SL);gbkey=stem_loop
+

@@ -84,25 +84,23 @@ process_reference_annotation() {
 
 process_reference_annotation_file() {
     virus_name="$1"
-    annotation_url="$2"
+    annotation_file="$2"
 
     echo "Sorting $virus_name annotations..."
-    jbrowse sort-gff "$WORKDIR/${virus_name}_annotations.gff" > "$WORKDIR/${virus_name}_genes.gff"
+    jbrowse sort-gff "$annotation_file" > "${annotation_file%.gff3}.sorted.gff3"
     check_error
 
     echo "Compressing $virus_name annotations..."
-    bgzip -f "$WORKDIR/${virus_name}_genes.gff"
+    bgzip -f "${annotation_file%.gff3}.sorted.gff3"
     check_error
 
     echo "Indexing $virus_name annotations..."
-    tabix "$WORKDIR/${virus_name}_genes.gff.gz"
+    tabix -p gff "${annotation_file%.gff3}.sorted.gff3.gz"
     check_error
 
     echo "Adding $virus_name annotations to JBrowse..."
-    jbrowse add-track "$WORKDIR/${virus_name}_gene
-
-    
-
+    jbrowse add-track "${annotation_file%.gff3}.sorted.gff3.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
+    check_error
 }
 
 # Function to process comparison genome for alignment track
@@ -144,7 +142,8 @@ process_comparison_genome() {
 
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
-process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
+process_reference_annotation_file "DENV-1" "denv1genes.gff3"
+# process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
 process_comparison_genome "DENV-1" \
     "DENV-1_New_Caledonia-2017-AVS-NC-094" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
 process_comparison_genome "DENV-1" \

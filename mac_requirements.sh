@@ -56,7 +56,7 @@ echo "Installing apache2..."
 brew install httpd
 
 # 2.2 Start the apache2 server
-"Starting apache2 server..."
+echo "Starting apache2 server..."
 brew services start httpd # will try tomorrow without sudo
 
 ### Additional Resources ###

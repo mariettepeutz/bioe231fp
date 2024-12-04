@@ -9,20 +9,20 @@ NC_001477.1	RefSeq	stem_loop	2	69	.	+	.	ID=id-NC_001477.1:2..69;Note=stem-loop A
 NC_001477.1	RefSeq	regulatory_region	70	78	.	+	.	ID=id-NC_001477.1:70..78;Note=oligo U track spacer;gbkey=regulatory;regulatory_class=other
 NC_001477.1	RefSeq	promoter	79	94	.	+	.	ID=id-NC_001477.1:79..94;Note=5' upstream AUG region (UAR);gbkey=regulatory;regulatory_class=promoter
 NC_001477.1	RefSeq	stem_loop	79	93	.	+	.	ID=id-NC_001477.1:79..93;Note=stem-loop B (SLB);gbkey=stem_loop
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	95	436	.	+	.	ID=id-NP_059433.1:1..114;Dbxref=VBRC:35735;Parent=cds-NP_059433.1;gbkey=Prot;product=anchored capsid protein ancC;protein_id=NP_722457.2
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	95	394	.	+	.	ID=id-NP_059433.1:1..100;Dbxref=VBRC:67793;Note=added by NCBI staff following more recent annotations of this virus sequence;Parent=cds-NP_059433.1;gbkey=Prot;product=capsid protein C;protein_id=NP_722466.2
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	437	934	.	+	.	ID=id-NP_059433.1:115..280;Parent=cds-NP_059433.1;gbkey=Prot;product=membrane glycoprotein precursor prM;protein_id=NP_733807.2
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	437	709	.	+	.	ID=id-NP_059433.1:115..205;Parent=cds-NP_059433.1;gbkey=Prot;product=protein pr;protein_id=YP_009164956.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	710	934	.	+	.	ID=id-NP_059433.1:206..280;Parent=cds-NP_059433.1;gbkey=Prot;product=membrane glycoprotein M;protein_id=NP_722459.2
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	935	2419	.	+	.	ID=id-NP_059433.1:281..775;Parent=cds-NP_059433.1;gbkey=Prot;product=envelope protein E;protein_id=NP_722460.2
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	2420	3475	.	+	.	ID=id-NP_059433.1:776..1127;Dbxref=VBRC:35739;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS1;protein_id=NP_722461.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	3476	4129	.	+	.	ID=id-NP_059433.1:1128..1345;Dbxref=VBRC:35740;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS2A;protein_id=NP_733808.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	4130	4519	.	+	.	ID=id-NP_059433.1:1346..1475;Dbxref=VBRC:35741;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS2B;protein_id=NP_733809.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	4520	6376	.	+	.	ID=id-NP_059433.1:1476..2094;Dbxref=VBRC:35742;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS3;protein_id=NP_722463.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	6377	6757	.	+	.	ID=id-NP_059433.1:2095..2221;Dbxref=VBRC:35743;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS4A;protein_id=NP_733810.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	6758	6826	.	+	.	ID=id-NP_059433.1:2222..2244;Dbxref=VBRC:67794;Note=added by NCBI staff following more recent annotations of this virus sequence;Parent=cds-NP_059433.1;gbkey=Prot;product=protein 2K;protein_id=NP_722467.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	6827	7573	.	+	.	ID=id-NP_059433.1:2245..2493;Dbxref=VBRC:35744;Parent=cds-NP_059433.1;gbkey=Prot;product=nonstructural protein NS4B;protein_id=NP_733811.1
-NC_001477.1	RefSeq	mature_protein_region_of_CDS	7574	10270	.	+	.	ID=id-NP_059433.1:2494..3392;Dbxref=VBRC:35745;Parent=cds-NP_059433.1;gbkey=Prot;product=RNA-dependent RNA polymerase NS5;protein_id=NP_722465.1
+NC_001477.1	RefSeq	mature_protein_region	95	436	.	+	.	ID=id-NP_059433.1:1..114;Dbxref=VBRC:35735;gbkey=Prot;product=anchored capsid protein ancC;protein_id=NP_722457.2
+NC_001477.1	RefSeq	mature_protein_region	95	394	.	+	.	ID=id-NP_059433.1:1..100;Dbxref=VBRC:67793;Note=added by NCBI staff following more recent annotations of this virus sequence;gbkey=Prot;product=capsid protein C;protein_id=NP_722466.2
+NC_001477.1	RefSeq	mature_protein_region	437	934	.	+	.	ID=id-NP_059433.1:115..280;gbkey=Prot;product=membrane glycoprotein precursor prM;protein_id=NP_733807.2
+NC_001477.1	RefSeq	mature_protein_region	437	709	.	+	.	ID=id-NP_059433.1:115..205;gbkey=Prot;product=protein pr;protein_id=YP_009164956.1
+NC_001477.1	RefSeq	mature_protein_region	710	934	.	+	.	ID=id-NP_059433.1:206..280;gbkey=Prot;product=membrane glycoprotein M;protein_id=NP_722459.2
+NC_001477.1	RefSeq	mature_protein_region	935	2419	.	+	.	ID=id-NP_059433.1:281..775;gbkey=Prot;product=envelope protein E;protein_id=NP_722460.2
+NC_001477.1	RefSeq	mature_protein_region	2420	3475	.	+	.	ID=id-NP_059433.1:776..1127;Dbxref=VBRC:35739;gbkey=Prot;product=nonstructural protein NS1;protein_id=NP_722461.1
+NC_001477.1	RefSeq	mature_protein_region	3476	4129	.	+	.	ID=id-NP_059433.1:1128..1345;Dbxref=VBRC:35740;gbkey=Prot;product=nonstructural protein NS2A;protein_id=NP_733808.1
+NC_001477.1	RefSeq	mature_protein_region	4130	4519	.	+	.	ID=id-NP_059433.1:1346..1475;Dbxref=VBRC:35741;gbkey=Prot;product=nonstructural protein NS2B;protein_id=NP_733809.1
+NC_001477.1	RefSeq	mature_protein_region	4520	6376	.	+	.	ID=id-NP_059433.1:1476..2094;Dbxref=VBRC:35742;gbkey=Prot;product=nonstructural protein NS3;protein_id=NP_722463.1
+NC_001477.1	RefSeq	mature_protein_region	6377	6757	.	+	.	ID=id-NP_059433.1:2095..2221;Dbxref=VBRC:35743;gbkey=Prot;product=nonstructural protein NS4A;protein_id=NP_733810.1
+NC_001477.1	RefSeq	mature_protein_region	6758	6826	.	+	.	ID=id-NP_059433.1:2222..2244;Dbxref=VBRC:67794;Note=added by NCBI staff following more recent annotations of this virus sequence;gbkey=Prot;product=protein 2K;protein_id=NP_722467.1
+NC_001477.1	RefSeq	mature_protein_region	6827	7573	.	+	.	ID=id-NP_059433.1:2245..2493;Dbxref=VBRC:35744;gbkey=Prot;product=nonstructural protein NS4B;protein_id=NP_733811.1
+NC_001477.1	RefSeq	mature_protein_region	7574	10270	.	+	.	ID=id-NP_059433.1:2494..3392;Dbxref=VBRC:35745;gbkey=Prot;product=RNA-dependent RNA polymerase NS5;protein_id=NP_722465.1
 NC_001477.1	RefSeq	stem_loop	114	130	.	+	.	ID=id-NC_001477.1:114..130;Note=capsid region hairpin (cHP);gbkey=stem_loop
 NC_001477.1	RefSeq	regulatory_region	132	142	.	+	.	ID=id-NC_001477.1:132..142;Note=5' conserved sequence (CS)%3B also called cyclization sequence;gbkey=regulatory;regulatory_class=other
 NC_001477.1	RefSeq	three_prime_UTR	10274	10735	.	+	.	ID=id-NC_001477.1:10274..10735;gbkey=3'UTR

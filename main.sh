@@ -144,45 +144,48 @@ process_comparison_genome() {
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
 process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3"
-process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
+# process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
 
 process_comparison_genome "DENV-1" \
-    "DENV-1_New_Caledonia-2017-AVS-NC-094" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
+    "DENV-1_New_Caledonia_2017" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
 process_comparison_genome "DENV-1" \
-    "DENV-1_Xishuangbanna_Dai_China" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW386867.1&report=fasta&format=text" 
+    "DENV-1_Xishuangbanna_Dai_China_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW386867.1&report=fasta&format=text" 
 process_comparison_genome "DENV-1" \
-    "DENV-1_Guangzhou_China" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PQ357572.1&report=fasta&format=text"
+    "DENV-1_Guangzhou_China_2021" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PQ357572.1&report=fasta&format=text"
 
 # Process DENV-2 Genomes
 process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz" 
-process_reference_annotation "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.gff.gz"
+# process_reference_annotation "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.gff.gz"
+process_reference_annotation_file "DENV-2" "referencedenv2genes.gff3"
 
 process_comparison_genome "DENV-2" \
-    "DENV-2_Cosmopolitan" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW512496.1&report=fasta&format=text" 
+    "DENV-2_Cosmopolitan_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW512496.1&report=fasta&format=text" 
 process_comparison_genome "DENV-2" \
-    "DENV-2_Malaysia" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PQ465587.1&report=fasta&format=text" 
+    "DENV-2_Malaysia_2016" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PQ465587.1&report=fasta&format=text" 
 process_comparison_genome "DENV-2" \
-    "DENV-2_Brazil" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PP546320.1&report=fasta&format=text" 
+    "DENV-2_Brazil_2021" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=PP546320.1&report=fasta&format=text" 
 
 # Process DENV-3 Genomes
 process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.fna.gz" 
-process_reference_annotation "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.gff.gz"
+# process_reference_annotation "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.gff.gz"
+process_reference_annotation_file "DENV-3" "referencedenv3genes.gff3"
 
 process_comparison_genome "DENV-3" \
-    "DENV-3_Florida" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"
+    "DENV-3_Florida_2022" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"
 process_comparison_genome "DENV-3" \
     "DENV-3_V91A_mutation" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821525.1&report=fasta&format=text"
 process_comparison_genome "DENV-3" \
-    "DENV-3_Senegal" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW288026.1&report=fasta&format=text" 
+    "DENV-3_Senegal_2018" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW288026.1&report=fasta&format=text" 
 
 # Process DENV-4 Genomes
 process_reference_genome "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.fna.gz"
-process_reference_annotation "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.gff.gz"
+# process_reference_annotation "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.gff.gz"
+process_reference_annotation_file "DENV-4" "referencedenv4genes.gff3"
 
 process_comparison_genome "DENV-4" \
-    "DENV-4_Indonesia" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OL314742.1&report=fasta&format=tex" 
+    "DENV-4_Indonesia_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OL314742.1&report=fasta&format=tex" 
 process_comparison_genome "DENV-4" \
-    "DENV-4_Paraguay" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OP811943.1&report=fasta&format=text" 
+    "DENV-4_Paraguay_2020" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OP811943.1&report=fasta&format=text" 
 process_comparison_genome "DENV-4" \
     "DENV-4_Cambodia_2010" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=KF543272.1&report=fasta&format=text" 
 process_comparison_genome "DENV-4" \

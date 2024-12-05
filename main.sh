@@ -89,19 +89,19 @@ process_reference_annotation_file() {
     file_type="$3"
 
     echo "Sorting $virus_name annotations..."
-    jbrowse sort-gff "$annotation_file" > "${virus_name}.sorted.${file_type}"
+    jbrowse sort-gff "$annotation_file" > "${virus_name}_genes.sorted.${file_type}"
     check_error
 
     echo "Compressing $virus_name annotations..."
-    bgzip -f "${virus_name}.sorted.${file_type}"
+    bgzip -f "${virus_name}_genes.sorted.${file_type}"
     check_error
 
     echo "Indexing $virus_name annotations..."
-    tabix -p gff "${virus_name}.sorted.${file_type}.gz"
+    tabix -p gff "${virus_name}_genes.sorted.${file_type}.gz"
     check_error
 
     echo "Adding $virus_name annotations to JBrowse..."
-    jbrowse add-track "${virus_name}.sorted.${file_type}.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
+    jbrowse add-track "${virus_name}_genes.sorted.${file_type}.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
     check_error
 }
 

@@ -53,8 +53,8 @@ process_reference_genome() {
     check_error
 }
 
-# Function to process a reference annotation
-process_reference_annotation() {
+# Function to process a reference annotation using URL - we are currently not using this function
+process_reference_annotation_URL() {
     virus_name="$1"
     annotation_url="$2"
     
@@ -146,7 +146,6 @@ process_comparison_genome() {
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
 process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3" "gff3"
-# process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
 
 process_comparison_genome "DENV-1" \
     "DENV-1_New_Caledonia_2017" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
@@ -160,7 +159,6 @@ process_comparison_genome "DENV-1" \
 
 # Process DENV-2 Genomes
 process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz" 
-# process_reference_annotation "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.gff.gz"
 process_reference_annotation_file "DENV-2" "referencedenv2genes.gff3" "gff3"
 
 process_comparison_genome "DENV-2" \
@@ -175,7 +173,6 @@ process_comparison_genome "DENV-2" \
 
 # Process DENV-3 Genomes
 process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.fna.gz" 
-# process_reference_annotation "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.gff.gz"
 process_reference_annotation_file "DENV-3" "referencedenv3genes.gff" "gff"
 
 process_comparison_genome "DENV-3" \
@@ -190,7 +187,6 @@ process_comparison_genome "DENV-3" \
 
 # Process DENV-4 Genomes
 process_reference_genome "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.fna.gz"
-# process_reference_annotation "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.gff.gz"
 process_reference_annotation_file "DENV-4" "referencedenv4genes.gff" "gff"
 
 process_comparison_genome "DENV-4" \

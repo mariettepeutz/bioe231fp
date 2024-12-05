@@ -141,7 +141,6 @@ process_comparison_genome() {
 }
 
 ### Main Script Execution ###
-# to do: add better gff3 files, change names, and vaccine genomes as alignment tracks
 
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 

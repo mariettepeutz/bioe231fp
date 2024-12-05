@@ -57,6 +57,7 @@ process_reference_genome() {
 process_reference_annotation() {
     virus_name="$1"
     annotation_url="$2"
+    
     echo "Processing $virus_name annotations..."
     wget -q "$annotation_url" -O "$WORKDIR/${virus_name}_annotations.gff.gz"
     check_error
@@ -85,21 +86,22 @@ process_reference_annotation() {
 process_reference_annotation_file() {
     virus_name="$1"
     annotation_file="$2"
+    file_type="$3"
 
     echo "Sorting $virus_name annotations..."
-    jbrowse sort-gff "$annotation_file" > "${annotation_file%.gff3}.sorted.gff3"
+    jbrowse sort-gff "$annotation_file" > "${virus_name}.sorted.${file_type}"
     check_error
 
     echo "Compressing $virus_name annotations..."
-    bgzip -f "${annotation_file%.gff3}.sorted.gff3"
+    bgzip -f "${virus_name}.sorted.${file_type}"
     check_error
 
     echo "Indexing $virus_name annotations..."
-    tabix -p gff "${annotation_file%.gff3}.sorted.gff3.gz"
+    tabix -p gff "${virus_name}.sorted.${file_type}.gz"
     check_error
 
     echo "Adding $virus_name annotations to JBrowse..."
-    jbrowse add-track "${annotation_file%.gff3}.sorted.gff3.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
+    jbrowse add-track "${virus_name}.sorted.${file_type}.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
     check_error
 }
 
@@ -143,7 +145,7 @@ process_comparison_genome() {
 
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
-process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3"
+process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3" "gff3"
 # process_reference_annotation "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.gff.gz"
 
 process_comparison_genome "DENV-1" \
@@ -159,7 +161,7 @@ process_comparison_genome "DENV-1" \
 # Process DENV-2 Genomes
 process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz" 
 # process_reference_annotation "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.gff.gz"
-process_reference_annotation_file "DENV-2" "referencedenv2genes.gff3"
+process_reference_annotation_file "DENV-2" "referencedenv2genes.gff3" "gff3"
 
 process_comparison_genome "DENV-2" \
     "DENV-2_Cosmopolitan_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW512496.1&report=fasta&format=text" 
@@ -174,7 +176,7 @@ process_comparison_genome "DENV-2" \
 # Process DENV-3 Genomes
 process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.fna.gz" 
 # process_reference_annotation "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.gff.gz"
-process_reference_annotation_file "DENV-3" "referencedenv3genes.gff3"
+process_reference_annotation_file "DENV-3" "referencedenv3genes.gff" "gff"
 
 process_comparison_genome "DENV-3" \
     "DENV-3_Florida_2022" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"
@@ -189,7 +191,7 @@ process_comparison_genome "DENV-3" \
 # Process DENV-4 Genomes
 process_reference_genome "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.fna.gz"
 # process_reference_annotation "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.gff.gz"
-process_reference_annotation_file "DENV-4" "referencedenv4genes.gff3"
+process_reference_annotation_file "DENV-4" "referencedenv4genes.gff" "gff"
 
 process_comparison_genome "DENV-4" \
     "DENV-4_Indonesia_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OL314742.1&report=fasta&format=tex" 

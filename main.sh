@@ -171,13 +171,13 @@ process_comparison_genome "DENV-2" \
 
 
 # Process DENV-3 Genomes
-process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.fna.gz" 
+process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/031/099/465/GCA_031099465.1_ASM3109946v1/GCA_031099465.1_ASM3109946v1_genomic.fna.gz"
 process_reference_annotation_file "DENV-3" "referencedenv3genes.gff" "gff"
 
 process_comparison_genome "DENV-3" \
     "DENV-3_Florida_2022" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"
-# process_comparison_genome "DENV-3" \
-#     "DENV-3_V91A_mutation" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821525.1&report=fasta&format=text"
+process_comparison_genome "DENV-3" \
+    "DENV-3_V91A_Nicaragua_2013" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MZ008477&report=fasta&format=text"
 process_comparison_genome "DENV-3" \
     "DENV-3_Senegal_2018" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW288026.1&report=fasta&format=text" 
 process_comparison_genome "DENV-3" \

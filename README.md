@@ -94,28 +94,33 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 
 ---
 
+
 ## Data Sources
 
 ### **External Data Sources**:
-- Genome sequences and annotations were retrieved from the NCBI FTP repository.
-- Specific data includes genomic FASTA files and GFF annotation files for Dengue.
-
-#### **Example Links**:
-- **Dengue**: [NCBI Genome Reference](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/)
+- Genome sequences (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, we included NCBI Accession IDs, links and URLs to the published articles they were described in, as part of the Supplementary Data 1 .csv file in this repository.
+- Reference genomes and annotation files (GFF files) were pulled from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file in this repository. We manually edited to remove the two annotations for the polygene and the cds, as well as any references to them as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
+- Additional literature consulted is included in the Thematic Focus Write-up PDF in this repository. 
 
 ### **Self-Generated Data**:
-- Alignments between reference and comparison genomes.
+- Alignments between reference and comparison genomes, using bowtie2.
 
 ---
 
-## JBrowse Usage Guide
 
 ### **Navigating JBrowse2**
 - **Reading Frames**: Explore six reading frames (three forward and three reverse).
-- **Annotation Tracks**: View genome annotations (e.g., genes, regulatory regions).
+- **Annotation Tracks**: View genome annotations (e.g., genes, regulatory regions). Note the annotations for each protein are called mature_protein_regions. We have included an annotation for the V91A mutation in the DENV-3 strain, at position 7316.
 - **Alignment Tracks**: Analyze alignment tracks for insights into different viral strains.
 
 ### **Customizing Data Views**
+- Users can "Add" > "Linear Genome View" for each serotype, and add the alignment tracks they wish to visualize in the "Open Track Selector". Using the cursor, they can diminish space between alignment tracks.
+- Users can align other sequences on the NCBI Genbank by calling the process_comparison_genome function in our main.sh on the serotype, a descriptive name, and the NCBI link directly to the fasta file. 
+A command looks like this: 
+
+      process_comparison_genome "DENV-4" \
+          "DENV-4_Descriptive_Name" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=<Accession ID>&report=fasta&format=text" 
+
 
 ---
 

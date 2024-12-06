@@ -1,6 +1,6 @@
 # The Dengue Destroyers
 
-This project provides a customizable database installer for JBrowse2, focused on the Dengue virus, to support pandemic researchers by integrating genome alignments and annotations for evolutionary analysis.
+This project provides a customizable database installer for JBrowse2, focused on the Dengue virus, to support pandemic researchers by integrating genome alignments and annotations for evolutionary analysis and to monitor changes important for vaccine development.
 
 ## **Table of Contents**
 1. [Instructions for Running the Script](#instructions-for-running-the-script)

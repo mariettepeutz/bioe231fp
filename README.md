@@ -90,7 +90,7 @@ This project provides a customizable database installer for JBrowse2, focused on
 
 ## Dengue Virus(DENV)
 
-An increasing and major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change expanding mosquito habitats and contributing to outbreaks in new regions, specifically in the Americas and Asia.
+An increasing and major global health threat, with over 6,800 cases reported in the United States as of October 31, 2024—more than double the cases reported in 2023—driven by climate change expanding mosquito habitats and contributing to outbreaks in new regions, specifically in the Americas and Asia. As the virus evolves and mutations affect genotypical characteristics, it is crucial to monitor mutations in the regions targeted by the approved vaccine. This browser allows visual comparison of several significant strains aligned to the vaccine strain.
 
 ---
 
@@ -98,8 +98,8 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 ## Data Sources
 
 ### **External Data Sources**:
-- **Genome sequences** (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, we included NCBI Accession IDs, links and URLs to the published articles they were described in, as part of the Supplementary Data 1 .csv file in this repository.
-- **Reference genomes and annotation files** (GFF files) were sourced from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file in this repository. We manually edited to remove the two annotations for the polygene and the cds, as well as any references to them as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
+- **Genome sequences** (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, NCBI Accession IDs, links and URLs to the published articles they were described in, can be found in the Supplementary Data 1 .csv file in this repository.
+- **Reference genomes and annotation files** (GFF files) were sourced from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file in this repository. We manually edited these to remove the two annotations for the polygene and the cds, as well as any references to these annotations as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
 - Additional literature consulted is included in the Thematic Focus Write-up PDF in this repository. 
 
 ### **Self-Generated Data**:
@@ -120,7 +120,6 @@ A command looks like this:
 
       process_comparison_genome "DENV-4" \
           "DENV-4_Descriptive_Name" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=ACCESSION_ID&report=fasta&format=text" 
-
 
 ---
 

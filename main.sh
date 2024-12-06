@@ -115,7 +115,7 @@ process_comparison_genome() {
 
 # Process DENV-1 Genomes
 process_reference_genome "DENV-1" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/862/125/GCF_000862125.1_ViralProj15306/GCF_000862125.1_ViralProj15306_genomic.fna.gz" 
-process_reference_annotation_file "DENV-1" "referencedenv1genes.gff3" "gff3"
+process_reference_annotation_file "DENV-1" "annotation_files/referencedenv1genes.gff3" "gff3"
 
 process_comparison_genome "DENV-1" \
     "DENV-1_New_Caledonia_2017" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW315194.1&report=fasta&format=text" 
@@ -129,7 +129,7 @@ process_comparison_genome "DENV-1" \
 
 # Process DENV-2 Genomes
 process_reference_genome "DENV-2" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/871/845/GCF_000871845.1_ViralProj20183/GCF_000871845.1_ViralProj20183_genomic.fna.gz" 
-process_reference_annotation_file "DENV-2" "referencedenv2genes.gff3" "gff3"
+process_reference_annotation_file "DENV-2" "annotation_files/referencedenv2genes.gff3" "gff3"
 
 process_comparison_genome "DENV-2" \
     "DENV-2_Cosmopolitan_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=MW512496.1&report=fasta&format=text" 
@@ -143,7 +143,7 @@ process_comparison_genome "DENV-2" \
 
 # Process DENV-3 Genomes
 process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/031/099/465/GCA_031099465.1_ASM3109946v1/GCA_031099465.1_ASM3109946v1_genomic.fna.gz"
-process_reference_annotation_file "DENV-3" "referencedenv3genes.gff" "gff"
+process_reference_annotation_file "DENV-3" "annotation_files/referencedenv3genes.gff" "gff"
 
 process_comparison_genome "DENV-3" \
     "DENV-3_Florida_2022" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"
@@ -157,7 +157,7 @@ process_comparison_genome "DENV-3" \
 
 # Process DENV-4 Genomes
 process_reference_genome "DENV-4" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/786/575/GCF_004786575.1_ASM478657v1/GCF_004786575.1_ASM478657v1_genomic.fna.gz"
-process_reference_annotation_file "DENV-4" "referencedenv4genes.gff" "gff"
+process_reference_annotation_file "DENV-4" "annotation_files/referencedenv4genes.gff" "gff"
 
 process_comparison_genome "DENV-4" \
     "DENV-4_Indonesia_2019" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OL314742.1&report=fasta&format=tex" 

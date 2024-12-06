@@ -100,7 +100,7 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 ### **External Data Sources**:
 - **Genome sequences** (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, NCBI Accession IDs, links and URLs to the published articles they were described in, can be found in the Supplementary Data 1 .csv file in this repository.
 - **Reference genomes and annotation files** (GFF files) were sourced from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file in this repository. We manually edited these to remove the two annotations for the polygene and the cds, as well as any references to these annotations as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
-- Additional literature consulted is included in the Thematic Focus Write-up PDF in this repository. 
+- Additional literature consulted is included in the Supplementary Data 3 - Thematic Focus Write-up PDF in this repository. 
 
 ### **Self-Generated Data**:
 - Alignments between reference and comparison genomes, using bowtie2.
@@ -114,7 +114,7 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 - **Alignment Tracks**: Analyze alignment tracks for insights into different viral strains.
 
 ### **Customizing Data Views**
-- Users can "Add" > "Linear Genome View" for each serotype, and add the alignment tracks they wish to visualize in the "Open Track Selector". Using the cursor, they can diminish space between alignment tracks.
+- Users can "Add" > "Linear Genome View" for each serotype, and add the alignment tracks they wish to visualize in the "Open Track Selector". Using the cursor, they can diminish space between alignment tracks. Zoom in on relevant regions, including the annotated E-protein.
 - Users can align other sequences on the NCBI Genbank by calling the process_comparison_genome function in our main.sh on the serotype, a descriptive name, and the NCBI link directly to the fasta file. 
 A command looks like this: 
 
@@ -128,6 +128,6 @@ A command looks like this:
 
 - Kate Barouch: Led the main coding efforts, contributed to  testing and debugging, reviewed code documentation for JBrowse, and assisted with literature review.
   
-- Mariette Peutz: Led literature review, contributed to data sourcing efforts, and assisted with with code development and testing.
+- Mariëtte Peutz: Led literature review, contributed to data sourcing efforts, and assisted with with code development and testing.
 
 ---

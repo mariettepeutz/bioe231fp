@@ -108,7 +108,7 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 ---
 
 
-### **Navigating JBrowse2**
+### [**Navigating JBrowse2**](https://jbrowse.org/jb2/docs/user_guides/basic_usage/)
 - **Reading Frames**: Explore six reading frames (three forward and three reverse).
 - **Annotation Tracks**: View genome annotations (e.g., genes, regulatory regions). Note the annotations for each protein are called mature_protein_regions. We have included an annotation for the V91A mutation in the DENV-3 strain, at position 7316.
 - **Alignment Tracks**: Analyze alignment tracks for insights into different viral strains.

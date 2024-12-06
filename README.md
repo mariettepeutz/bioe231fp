@@ -115,7 +115,7 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 
 ### **Customizing Data Views**
 - Users can "Add" > "Linear Genome View" for each serotype, and add the alignment tracks they wish to visualize in the "Open Track Selector". Using the cursor, they can diminish space between alignment tracks. Zoom in on relevant regions, including the annotated E-protein.
-- Users can align other sequences on the NCBI Genbank by calling the process_comparison_genome function in our main.sh on the serotype, a descriptive name, and the NCBI link directly to the FASTA file. 
+- Users can align other sequences on the NCBI Genbank by calling the process_comparison_genome function in our main.sh script on the serotype, a descriptive name, and the NCBI link directly to the FASTA file. 
 A command looks like this: 
 
       process_comparison_genome "DENV-4" \

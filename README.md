@@ -119,7 +119,7 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 A command looks like this: 
 
       process_comparison_genome "DENV-4" \
-          "DENV-4_Descriptive_Name" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=<Accession ID>&report=fasta&format=text" 
+          "DENV-4_Descriptive_Name" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=ACCESSION_ID&report=fasta&format=text" 
 
 
 ---

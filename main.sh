@@ -17,7 +17,7 @@ WORKDIR=$(pwd)
 if [ -z "$APACHE_ROOT" ]; then
     echo "Error: APACHE_ROOT is not defined. Please set it using the following command:"
     echo "export APACHE_ROOT='/path/to/apache/root'"
-    echo "Refer to the instructions in the script header or requirements.txt for details."
+    echo "Refer to the instructions in the READme for details."
     exit 1
 fi
 
@@ -28,6 +28,7 @@ echo "Using Apache root directory: $APACHE_ROOT"
 if [ ! -d "$APACHE_ROOT/jbrowse2" ]; then
     echo "Error: JBrowse2 not found in $APACHE_ROOT/jbrowse2."
     echo "Please ensure JBrowse2 is installed and configured correctly."
+    echo "Refer to the instructions in the READme for details."
     exit 1
 fi
 
@@ -50,36 +51,6 @@ process_reference_genome() {
 
     echo "Adding $virus_name reference genome to JBrowse..."
     jbrowse add-assembly "$WORKDIR/${virus_name}_genome.fna" --out "$APACHE_ROOT/jbrowse2" --load copy --name "$virus_name"
-    check_error
-}
-
-# Function to process a reference annotation using URL - we are currently not using this function
-process_reference_annotation_URL() {
-    virus_name="$1"
-    annotation_url="$2"
-    
-    echo "Processing $virus_name annotations..."
-    wget -q "$annotation_url" -O "$WORKDIR/${virus_name}_annotations.gff.gz"
-    check_error
-
-    echo "Unzipping $virus_name annotations..."
-    gunzip -f "$WORKDIR/${virus_name}_annotations.gff.gz"
-    check_error
-
-    echo "Sorting $virus_name annotations..."
-    jbrowse sort-gff "$WORKDIR/${virus_name}_annotations.gff" > "$WORKDIR/${virus_name}_genes.gff"
-    check_error
-
-    echo "Compressing $virus_name annotations..."
-    bgzip -f "$WORKDIR/${virus_name}_genes.gff"
-    check_error
-
-    echo "Indexing $virus_name annotations..."
-    tabix "$WORKDIR/${virus_name}_genes.gff.gz"
-    check_error
-
-    echo "Adding $virus_name annotations to JBrowse..."
-    jbrowse add-track "$WORKDIR/${virus_name}_genes.gff.gz" --out "$APACHE_ROOT/jbrowse2" --load copy --assemblyNames "$virus_name"
     check_error
 }
 

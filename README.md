@@ -98,9 +98,9 @@ An increasing and major global health threat, with over 6,800 cases reported in 
 ## Data Sources
 
 ### **External Data Sources**:
-- **Genome sequences** (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, NCBI Accession IDs, links and URLs to the published articles they were described in, can be found in the Supplementary Data 1 .csv file in this repository.
-- **Reference genomes and annotation files** (GFF files) were sourced from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file in this repository. We manually edited these to remove the two annotations for the polygene and the cds, as well as any references to these annotations as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
-- Additional literature consulted is included in the Supplementary Data 3 - Thematic Focus Write-up PDF in this repository. 
+- **Genome sequences** (FASTA files) were retrieved from the NCBI FTP repository. For each sequence, NCBI Accession IDs, links and URLs to the published articles they were described in, can be found in Supplementary Data 1 document located in miscellaneous > supplementary data. 
+- **Reference genomes and annotation files** (GFF files) were sourced from NCBI Genome. Documentation on this sourcing is in the Supplementary Data 2 PDF file also in the miscellaneous folder of this repository. We manually edited these to remove the two annotations for the polygene and the cds, as well as any references to these annotations as 'parent' in the other annotations. Without this, JBrowse2 will only display the Polygene annotation. 
+- Additional literature consulted is included in the Supplementary Data 3 - Thematic Focus Write-up PDF in the miscellaneous folder of this repository. 
 
 ### **Self-Generated Data**:
 - Alignments between reference and comparison genomes, using bowtie2.

@@ -7,17 +7,16 @@
 ##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11069
 KF955462.1	Genbank	region	1	10810	.	+	.	ID=KF955462.1:1..10810;Dbxref=taxon:11069;collection-date=2001;country=Cambodia;gbkey=Src;genome=genomic;isolate=DENV-3/KH/BID-V2074/2001;isolation-source=cell supernatant;mol_type=genomic RNA;nat-host=Homo sapiens;note=cell passage history: unknown%3B cohort population: Dengue Surveillance;type=3
 KF955462.1	Genbank	five_prime_UTR	1	318	.	+	.	ID=id-KF955462.1:1..318;Note=indels in UTR have not been validated;gbkey=5'UTR
-KF955462.1	Genbank	CDS	319	10491	.	+	0	ID=cds-AHG23227.1;Dbxref=NCBI_GP:AHG23227.1;Name=AHG23227.1;gbkey=CDS;product=polyprotein;protein_id=AHG23227.1
-KF955462.1	Genbank	mature_protein_region_of_CDS	319	660	.	+	.	ID=id-AHG23227.1:1..114;Parent=cds-AHG23227.1;gbkey=Prot;product=capsid protein
-KF955462.1	Genbank	mature_protein_region_of_CDS	661	1158	.	+	.	ID=id-AHG23227.1:115..280;Parent=cds-AHG23227.1;gbkey=Prot;product=membrane glycoprotein
-KF955462.1	Genbank	mature_protein_region_of_CDS	1159	2637	.	+	.	ID=id-AHG23227.1:281..773;Parent=cds-AHG23227.1;gbkey=Prot;product=envelope protein
-KF955462.1	Genbank	mature_protein_region_of_CDS	2638	3693	.	+	.	ID=id-AHG23227.1:774..1125;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS1
-KF955462.1	Genbank	mature_protein_region_of_CDS	3694	4347	.	+	.	ID=id-AHG23227.1:1126..1343;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS2A
-KF955462.1	Genbank	mature_protein_region_of_CDS	4348	4737	.	+	.	ID=id-AHG23227.1:1344..1473;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS2B
-KF955462.1	Genbank	mature_protein_region_of_CDS	4738	6594	.	+	.	ID=id-AHG23227.1:1474..2092;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS3
-KF955462.1	Genbank	mature_protein_region_of_CDS	6595	6975	.	+	.	ID=id-AHG23227.1:2093..2219;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS4A
-KF955462.1	Genbank	mature_protein_region_of_CDS	6976	7044	.	+	.	ID=id-AHG23227.1:2220..2242;Parent=cds-AHG23227.1;gbkey=Prot;product=2K peptide
-KF955462.1	Genbank	mature_protein_region_of_CDS	7045	7788	.	+	.	ID=id-AHG23227.1:2243..2490;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS4B
-KF955462.1	Genbank	mature_protein_region_of_CDS	7789	10488	.	+	.	ID=id-AHG23227.1:2491..3390;Parent=cds-AHG23227.1;gbkey=Prot;product=nonstructural protein NS5
+KF955462.1	Genbank	mature_protein_region_of_CDS	319	660	.	+	.	ID=id-AHG23227.1:1..114;gbkey=Prot;product=capsid protein
+KF955462.1	Genbank	mature_protein_region_of_CDS	661	1158	.	+	.	ID=id-AHG23227.1:115..280;gbkey=Prot;product=membrane glycoprotein
+KF955462.1	Genbank	mature_protein_region_of_CDS	1159	2637	.	+	.	ID=id-AHG23227.1:281..773;gbkey=Prot;product=envelope protein
+KF955462.1	Genbank	mature_protein_region_of_CDS	2638	3693	.	+	.	ID=id-AHG23227.1:774..1125;gbkey=Prot;product=nonstructural protein NS1
+KF955462.1	Genbank	mature_protein_region_of_CDS	3694	4347	.	+	.	ID=id-AHG23227.1:1126..1343;gbkey=Prot;product=nonstructural protein NS2A
+KF955462.1	Genbank	mature_protein_region_of_CDS	4348	4737	.	+	.	ID=id-AHG23227.1:1344..1473;gbkey=Prot;product=nonstructural protein NS2B
+KF955462.1	Genbank	mature_protein_region_of_CDS	4738	6594	.	+	.	ID=id-AHG23227.1:1474..2092;gbkey=Prot;product=nonstructural protein NS3
+KF955462.1	Genbank	mature_protein_region_of_CDS	6595	6975	.	+	.	ID=id-AHG23227.1:2093..2219;gbkey=Prot;product=nonstructural protein NS4A
+KF955462.1	Genbank	mature_protein_region_of_CDS	6976	7044	.	+	.	ID=id-AHG23227.1:2220..2242;gbkey=Prot;product=2K peptide
+KF955462.1	Genbank	mature_protein_region_of_CDS	7045	7788	.	+	.	ID=id-AHG23227.1:2243..2490;gbkey=Prot;product=nonstructural protein NS4B
+KF955462.1	Genbank	mature_protein_region_of_CDS	7789	10488	.	+	.	ID=id-AHG23227.1:2491..3390;gbkey=Prot;product=nonstructural protein NS5
 KF955462.1	Genbank	three_prime_UTR	10492	10810	.	+	.	ID=id-KF955462.1:10492..10810;Note=indels in UTR have not been validated;gbkey=3'UTR
 ###

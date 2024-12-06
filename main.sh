@@ -172,7 +172,7 @@ process_comparison_genome "DENV-2" \
 
 # Process DENV-3 Genomes
 process_reference_genome "DENV-3" "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/004/788/295/GCF_004788295.1_ASM478829v1/GCF_004788295.1_ASM478829v1_genomic.fna.gz" 
-process_reference_annotation_file "DENV-3" "referencedenv3genes.gff" "gff"
+process_reference_annotation_file "DENV-3" "referencedenv4genes.gff" "gff"
 
 process_comparison_genome "DENV-3" \
     "DENV-3_Florida_2022" "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=OQ821613.1&report=fasta&format=text"

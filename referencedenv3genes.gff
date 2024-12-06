@@ -17,7 +17,7 @@ KF955462.1	Genbank	mature_protein_region_of_CDS	4738	6594	.	+	.	ID=id-AHG23227.1
 KF955462.1	Genbank	mature_protein_region_of_CDS	6595	6975	.	+	.	ID=id-AHG23227.1:2093..2219;gbkey=Prot;product=nonstructural protein NS4A
 KF955462.1	Genbank	mature_protein_region_of_CDS	6976	7044	.	+	.	ID=id-AHG23227.1:2220..2242;gbkey=Prot;product=2K peptide
 KF955462.1	Genbank	mature_protein_region_of_CDS	7045	7788	.	+	.	ID=id-AHG23227.1:2243..2490;gbkey=Prot;product=nonstructural protein NS4B
-KF955462.1	Genbank	region	7001	7001	.	+	.	ID=id-AHG23227.1:2243..2490;gbkey=Prot;product=V91A mutation 
+KF955462.1	Genbank	region	7001	7001	.	+	.	ID=id-AHG23227.1:2243..2497;gbkey=Prot;product=V91A mutation 
 KF955462.1	Genbank	mature_protein_region_of_CDS	7789	10488	.	+	.	ID=id-AHG23227.1:2491..3390;gbkey=Prot;product=nonstructural protein NS5
 KF955462.1	Genbank	three_prime_UTR	10492	10810	.	+	.	ID=id-KF955462.1:10492..10810;Note=indels in UTR have not been validated;gbkey=3'UTR
 ###

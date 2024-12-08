@@ -1,0 +1,732 @@
+{
+  "assemblies": [
+    {
+      "name": "DENV-1",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "DENV-1-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-1_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-1_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    },
+    {
+      "name": "DENV-2",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "DENV-2-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-2_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-2_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    },
+    {
+      "name": "DENV-3",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "DENV-3-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-3_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-3_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    },
+    {
+      "name": "DENV-4",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "DENV-4-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      }
+    }
+  ],
+  "configuration": {},
+  "connections": [],
+  "defaultSession": {
+    "name": "New Session"
+  },
+  "tracks": [
+    {
+      "type": "FeatureTrack",
+      "trackId": "DENV-1_genes.sorted.gff3",
+      "name": "DENV-1_genes.sorted.gff3",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "DENV-1_genes.sorted.gff3.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-1_genes.sorted.gff3.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": [
+        "DENV-1"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-1_New_Caledonia_2017.sorted",
+      "name": "DENV-1_New_Caledonia_2017",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-1_New_Caledonia_2017.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-1_New_Caledonia_2017.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-1_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-1_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-1"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-1_Xishuangbanna_Dai_China_2019.sorted",
+      "name": "DENV-1_Xishuangbanna_Dai_China_2019",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-1_Xishuangbanna_Dai_China_2019.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-1_Xishuangbanna_Dai_China_2019.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-1_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-1_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-1"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-1_Guangzhou_China_2021.sorted",
+      "name": "DENV-1_Guangzhou_China_2021",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-1_Guangzhou_China_2021.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-1_Guangzhou_China_2021.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-1_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-1_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-1"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-1_Vaccine_Strain.sorted",
+      "name": "DENV-1_Vaccine_Strain",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-1_Vaccine_Strain.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-1_Vaccine_Strain.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-1_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-1_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-1"
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "DENV-2_genes.sorted.gff3",
+      "name": "DENV-2_genes.sorted.gff3",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "DENV-2_genes.sorted.gff3.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-2_genes.sorted.gff3.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": [
+        "DENV-2"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-2_Cosmopolitan_2019.sorted",
+      "name": "DENV-2_Cosmopolitan_2019",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-2_Cosmopolitan_2019.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-2_Cosmopolitan_2019.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-2_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-2_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-2"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-2_Malaysia_2016.sorted",
+      "name": "DENV-2_Malaysia_2016",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-2_Malaysia_2016.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-2_Malaysia_2016.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-2_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-2_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-2"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-2_Brazil_2021.sorted",
+      "name": "DENV-2_Brazil_2021",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-2_Brazil_2021.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-2_Brazil_2021.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-2_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-2_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-2"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-2_Vaccine_Strain.sorted",
+      "name": "DENV-2_Vaccine_Strain",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-2_Vaccine_Strain.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-2_Vaccine_Strain.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-2_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-2_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-2"
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "DENV-3_genes.sorted.gff",
+      "name": "DENV-3_genes.sorted.gff",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "DENV-3_genes.sorted.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-3_genes.sorted.gff.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": [
+        "DENV-3"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-3_Florida_2022.sorted",
+      "name": "DENV-3_Florida_2022",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-3_Florida_2022.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-3_Florida_2022.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-3_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-3_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-3"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-3_V91A_Nicaragua_2013.sorted",
+      "name": "DENV-3_V91A_Nicaragua_2013",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-3_V91A_Nicaragua_2013.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-3_V91A_Nicaragua_2013.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-3_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-3_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-3"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-3_Senegal_2018.sorted",
+      "name": "DENV-3_Senegal_2018",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-3_Senegal_2018.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-3_Senegal_2018.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-3_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-3_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-3"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-3_Vaccine_Strain.sorted",
+      "name": "DENV-3_Vaccine_Strain",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-3_Vaccine_Strain.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-3_Vaccine_Strain.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-3_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-3_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-3"
+      ]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "DENV-4_genes.sorted.gff",
+      "name": "DENV-4_genes.sorted.gff",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "DENV-4_genes.sorted.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_genes.sorted.gff.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-4_Indonesia_2019.sorted",
+      "name": "DENV-4_Indonesia_2019",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-4_Indonesia_2019.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_Indonesia_2019.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-4_Paraguay_2020.sorted",
+      "name": "DENV-4_Paraguay_2020",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-4_Paraguay_2020.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_Paraguay_2020.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-4_Cambodia_2010.sorted",
+      "name": "DENV-4_Cambodia_2010",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-4_Cambodia_2010.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_Cambodia_2010.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-4_French_Polynesia_2009.sorted",
+      "name": "DENV-4_French_Polynesia_2009",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-4_French_Polynesia_2009.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_French_Polynesia_2009.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    },
+    {
+      "type": "AlignmentsTrack",
+      "trackId": "DENV-4_Vaccine_Strain.sorted",
+      "name": "DENV-4_Vaccine_Strain",
+      "adapter": {
+        "type": "BamAdapter",
+        "bamLocation": {
+          "uri": "DENV-4_Vaccine_Strain.sorted.bam",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "DENV-4_Vaccine_Strain.sorted.bam.bai",
+            "locationType": "UriLocation"
+          },
+          "indexType": "BAI"
+        },
+        "sequenceAdapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": {
+            "uri": "DENV-4_genome.fna",
+            "locationType": "UriLocation"
+          },
+          "faiLocation": {
+            "uri": "DENV-4_genome.fna.fai",
+            "locationType": "UriLocation"
+          }
+        }
+      },
+      "assemblyNames": [
+        "DENV-4"
+      ]
+    }
+  ]
+}
